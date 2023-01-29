@@ -5,6 +5,8 @@ pcall(require, "luarocks.loader")
 -- Standard awesome library
 local gears = require("gears")
 local awful = require("awful")
+local math = require("math")
+local io = require("io")
 require("awful.autofocus")
 -- Widget and layout library
 local wibox = require("wibox")
@@ -155,7 +157,7 @@ local tasklist_buttons = gears.table.join(
 local function set_wallpaper(s)
     -- Wallpaper
     if beautiful.wallpaper then
-        local wallpaper = beautiful.wallpaper
+        local wallpaper = "$HOME/Documents/Repositories/Wallpapers/casey-horner-KR03PvYv3Fs-unsplash.jpg"--beautiful.wallpaper
         -- If wallpaper is a function, call it with the screen
         if type(wallpaper) == "function" then
             wallpaper = wallpaper(s)
@@ -562,6 +564,19 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- Gaps between windows
 beautiful.useless_gap=10
 
+-- Random wallpapers
+function set_random_wallpaper()
+	for file in io.popen('ls $HOME/Documents/Repositories/Wallpapers'):lines() do
+		files = {}
+        	table.insert(files, file)
+    	end
+
+	math.random(os.time())
+	wallpaper = files[math.random(1, #files)]
+
+	return wallpaper
+end
+
 -- Autostart apps
-awful.spawn.with_shell('compton')
-awful.spawn.with_shell('nitrogen --restore')
+awful.spawn.with_shell("compton")
+awful.spawn.with_shell("nitrogen --restore")
