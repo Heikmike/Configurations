@@ -109,6 +109,7 @@ source $ZSH/oh-my-zsh.sh
 alias v=nvim
 alias c=clear
 alias f="open /Applications/Firefox.app"
+alias cdc="cd $HOME/Documents/Repositories/Configurations"
 
 
 
