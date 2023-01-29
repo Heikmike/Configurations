@@ -77,7 +77,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions copyfile copypath python vi-mode)
+plugins=(git zsh-autosuggestions vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -116,8 +116,6 @@ alias cdc="cd $HOME/Documents/Repositories/Configurations"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-source /opt/homebrew/etc/profile.d/z.sh
-
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/opt/homebrew/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
@@ -133,5 +131,4 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-source /Users/heikmike/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 export PATH=/usr/local/tranquil/bin:$PATH
