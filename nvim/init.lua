@@ -1,1 +1,2 @@
-vim.cmd("source $HOME/.config/nvim/plugins.vim")
+require("heikmike")
+vim.cmd("source /home/heikmike/.config/nvim/plugins/plugins.vim")
