@@ -124,6 +124,11 @@ _G.packer_plugins = {
     path = "/home/heikmike/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
+  ["melange-nvim"] = {
+    loaded = true,
+    path = "/home/heikmike/.local/share/nvim/site/pack/packer/start/melange-nvim",
+    url = "https://github.com/savq/melange-nvim"
+  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/home/heikmike/.local/share/nvim/site/pack/packer/start/nvim-cmp",

@@ -77,7 +77,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git vi-mode copypath)
+plugins=(git vi-mode copypath zsh-autosuggestions fast-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -111,6 +111,10 @@ alias c=clear
 alias f="open /Applications/Firefox.app"
 alias cdc="cd $HOME/Documents/Repositories/Configurations"
 alias w="nitrogen --set-zoom-fill --random" 
+alias nc="nvim ~/.config/nvim"
+alias hc="nvim ~/.config/hypr"
+alias zc="nvim ~/.zshrc"
+alias kc="nvim ~/.config/kitty"
 
 
 

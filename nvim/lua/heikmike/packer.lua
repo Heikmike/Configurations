@@ -47,4 +47,6 @@ use {
   }
 }
 
+use "savq/melange-nvim"
+
 end)
