@@ -108,13 +108,12 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias v=nvim
 alias c=clear
-alias f="open /Applications/Firefox.app"
 alias cdc="cd $HOME/Documents/Repositories/Configurations"
-alias w="nitrogen --set-zoom-fill --random" 
 alias nc="nvim ~/.config/nvim"
-alias hc="nvim ~/.config/hypr"
+alias hc="nvim ~/.config/hypr/hyprland.conf"
 alias zc="nvim ~/.zshrc"
 alias kc="nvim ~/.config/kitty"
+alias ec="nvim ~/.config/eww"
 
 
 

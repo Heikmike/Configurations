@@ -10,3 +10,4 @@ Plug 'lervag/vimtex'
 Plug 'Fymyte/rasi.vim'
 Plug 'preservim/nerdcommenter'
 call plug#end()
+
