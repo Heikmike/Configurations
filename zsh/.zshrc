@@ -11,6 +11,9 @@ fi
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
+# ChatGPT key
+export OPENAI_API_KEY=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
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -77,7 +80,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git vi-mode copypath zsh-autosuggestions fast-syntax-highlighting)
+plugins=(git vi-mode copypath zsh-autosuggestions fast-syntax-highlighting z)
 
 source $ZSH/oh-my-zsh.sh
 
