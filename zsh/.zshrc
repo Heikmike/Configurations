@@ -117,6 +117,7 @@ alias hc="nvim ~/.config/hypr/hyprland.conf"
 alias zc="nvim ~/.zshrc"
 alias kc="nvim ~/.config/kitty"
 alias ec="nvim ~/.config/eww"
+alias sd="shutdown now"
 
 
 
@@ -139,3 +140,13 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 export PATH=/usr/local/tranquil/bin:$PATH
+
+# FZF
+[[ $- == *i* ]] && source "/usr/share/fzf/completion.zsh" 2> /dev/null
+[[ $- == *i* ]] && source "/usr/share/fzf/key-bindings.zsh" 2> /dev/null
+
+export FZF_DEFAULT_COMMAND='rg --files --no-ignore --follow -g "!{.git,*/**/.git,*/**/node_modules,out,*/**/out,CMakeFiles, */**/CMakeFiles}/*" 2> /dev/null'
+export FZF_CTRL_T_COMMAND=$FZF_DEFAULT_COMMAND
+export FZF_ALT_C_COMMAND='fd --type d --hidden --follow --exclude ".git,node_modules"'
+export FZF_DEFAULT_OPTS='--height 40% --layout=reverse'
+export FZF_COMPLETION_TRIGGER='**'
