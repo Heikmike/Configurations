@@ -7,10 +7,7 @@ EWW=`which eww`
 cmd="firefox --new-tab"
 
 close_dash() {
-	${EWW} --config "$CFG" close \
-					background profile system clock uptime music github \
-					reddit twitter youtube weather apps mail logout sleep reboot poweroff folders
-	rm -rf "$FILE"
+    /home/heikmike/.config/eww/dashboard/launch_dashboard
 }
 
 if [[ "$1" == "--mail" ]]; then
@@ -20,7 +17,7 @@ elif [[ "$1" == "--gh" ]]; then
 	close_dash && ${cmd} "https://github.com/Heikmike"
 
 elif [[ "$1" == "--rd" ]]; then
-	close_dash && $kitty
+	close_dash && kitty
 
 elif [[ "$1" == "--tw" ]]; then
 	close_dash && ${cmd} "https://twitter.com/home"

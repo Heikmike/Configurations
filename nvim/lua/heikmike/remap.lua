@@ -12,4 +12,4 @@ vim.keymap.set("n", "Fp", "F(")
 vim.keymap.set("i", "<", "\\")
 vim.keymap.set("i", "\\", "<")
 vim.keymap.set("v", "<leader>y", '"+y')
-
+vim.keymap.set("n", "U", '<C-R>')

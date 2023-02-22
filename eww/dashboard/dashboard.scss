@@ -7,15 +7,15 @@
 
 /** Background ***************************************/
 .bg {
-	background-image: url("images/bg.png");
+	background-image: url("/home/heikmike/.config/eww/dashboard/images/bg.png");
 	background-color: #474D59;
 	opacity: 1;
 }
 
 /** Generic window ***********************************/
 .genwin {
-	background-color: #3C3B3B;
-    border-radius: 2px;
+	background-color: #070A12;
+    border-radius: 15px;
 }
 
 /** Profile ******************************************/
@@ -28,7 +28,7 @@
 }
 
 .fullname {
-	color: #D46389;
+	color: #FFFFFF;
 	font-size : 30px;
 	font-weight : bold;
 }
@@ -44,7 +44,7 @@
 .iconcpu, .iconmem, .iconbright, .iconbat {
 	font-size : 32px;
 	font-weight : normal;
-    font-family: Font Awesome;
+    font-family: "Font Awesome 6 Free";
 }
 .iconcpu {
 	color: #BF616A;
@@ -88,7 +88,7 @@
 /** Clock ********************************************/
 .time_hour, .time_min {
 	color: #81A1C1;
-	font-size : 70px;
+	font-size : 60px;
 	font-weight : bold;
 }
 .time_hour {
@@ -106,10 +106,10 @@
 }
 
 .time_day {
-	color: #EBCB8B;
-	font-size : 30px;
+	color: #FFFFFF;
+	font-size : 24px;
 	font-weight : normal;
-	margin : 0px 10px 20px -20px;
+    margin : 0px 10px 20px -20px;
 }
 
 /** Uptime ********************************************/
@@ -117,6 +117,7 @@
 	color: #B48EAD;
 	font-size : 90px;
 	font-weight : normal;
+    font-family: "Font Awesome 6 Free";
 }
 
 .uphour {
@@ -189,7 +190,7 @@
 
 /** Weather ***************************************/
 .iconweather {
-	font-family: Iosevka Nerd Font;
+	font-family: "Font Awesome 6 Free";
 	font-size : 120px;
 	font-weight : normal;
 	margin : 15px 0px 0px 30px;
@@ -244,7 +245,7 @@
 .app_vbox {}
 
 /** Links ***************************************/
-.iconweb, .iconmail {
+.icon_ytb {
 	color: #FFFFFF;
 	font-family: Iosevka Nerd Font;
 	font-size : 70px;
@@ -252,24 +253,72 @@
 
     transition: color 0.2s ease-in-out 0s;
 }
-.iconweb:hover, .iconmail:hover {
+.icon_ytb:hover {
     color: #DF584E;
+}
+.icon_term {
+	color: #FFFFFF;
+	font-family: Iosevka Nerd Font;
+	font-size : 70px;
+	font-weight : normal;
+
+    transition: color 0.2s ease-in-out 0s;
+}
+.icon_term:hover {
+    color: #000000;
+}
+.icon_firefox {
+	color: #FFFFFF;
+	font-family: FontAwesome;
+	font-size : 70px;
+	font-weight : normal;
+
+    transition: color 0.2s ease-in-out 0s;
+}
+.icon_firefox:hover {
+    color: #E66000;
+}
+.icon_twitter {
+	color: #FFFFFF;
+	font-family: Iosevka Nerd Font;
+	font-size : 70px;
+	font-weight : normal;
+
+    transition: color 0.2s ease-in-out 0s;
+}
+.icon_twitter:hover {
+    color: #1DA1F2;
 }
 .iconmail {
 	color: #DF584E;
 }
 
 .github {
-	background-color: #24292E;
+	background-color: #E66000;
 	border-radius: 16px;
+    
+    transition: all 0.2s ease-in-out 0s;
+}
+.github:hover {
+    background-color: #FFFFFF;
 }
 .reddit {
 	background-color: #000000;
 	border-radius: 16px;
+
+    transition: all 0.2s ease-in-out 0s;
+}
+.reddit:hover {
+    background-color: #FFFFFF;
 }
 .twitter {
-	background-color: #61AAD6;
+	background-color: #1DA1F2;
 	border-radius: 16px;
+
+    transition: all 0.2s ease-in-out 0s;
+}
+.twitter:hover {
+    background-color: #FFFFFF;
 }
 .youtube {
 	background-color: #DF584E;
@@ -284,6 +333,7 @@
 	background-color: #FFFFFF;
 	border-radius: 16px;
 }
+
 
 .mailbox {
 	background-color: #FFFFFF;
@@ -389,6 +439,31 @@
 }
 .label_folder6 {
 	color: #88C0D0;
+}
+
+.archlogo {
+    color: #1793d1;
+    font-size: 250px;
+    font-family: "FiraCode Nerd Font Mono";
+}
+
+.epfl_box {
+    padding-left: 8px; 
+    padding-top: 8px;
+}
+
+.epfl_logo {
+    background-image: url('/home/heikmike/.config/eww/dashboard/images/epfl.png');
+    background-position: center;
+    background-size: 80%;
+
+    transition: background-image 0.2s ease-out 0s;
+}
+
+.epfl_logo:hover {
+    background-image: url('/home/heikmike/.config/eww/dashboard/images/epfl_black.png');
+    background-position: center;
+    background-size: 100%;
 }
 
 /** EOF *************************************************/
