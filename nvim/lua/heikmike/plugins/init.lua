@@ -1,6 +1,11 @@
 return {
+    { 'Pocco81/auto-save.nvim' },
     { 'savq/melange-nvim' },
-    { 'github/copilot.vim' },
+    { 'github/copilot.vim',
+        config = function()
+            vim.api.nvim_command("source $HOME/.config/nvim/lua/heikmike/plugins/configurations/copilot.vim")
+        end
+    },
     { 'nvim-treesitter/nvim-treesitter' },
     { 'nvim-lua/plenary.nvim' },
     { 'ThePrimeagen/harpoon' },
