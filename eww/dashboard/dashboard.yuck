@@ -64,10 +64,8 @@
 ;; profile
 (defwidget user [] 
 	(box :class "genwin" :orientation "v" :spacing 35 :space-evenly "false" :vexpand "false" :hexpand "false"
-		; (box :style "background-image: url('${IMAGE}');" :class "face" :halign "center")
         (label :class "archlogo" :text "" :halign "center" :wrap "true")
 		(label :class "fullname" :halign "center" :wrap "true" :limit-width 25 :text NAME)))
-		; (label :class "username" :halign "center" :wrap "true" :limit-width 25 :text UNAME)))
 
 ;; system
 (defwidget system [] 
@@ -190,8 +188,8 @@
 (defwidget folders [] 
 	(box :class "genwin" :orientation "v" :space-evenly "false" :vexpand "false" :hexpand "false" 
 		(box :class "hddbox" :orientation "h" :space-evenly "false" :vexpand "false" :hexpand "false" 
-			(box :space-evenly "false" :vexpand "false" :hexpand "false"
-				(button :class "hddicon" :onclick "scripts/open_apps --fm" "")
+			(box :space-evenly "false" :vexpand "false" :hexpand "false" :halign "center"
+				(button :class "hddicon" :onclick "scripts/open_apps --fm" "")
 				(label :class "fs_sep" :text "|"))
 			(box :space-evenly "false" :vexpand "false" :hexpand "false" 
 				(label :class "hdd_label" :wrap "true" :limit-width 25 :text FREE)))
@@ -225,12 +223,12 @@
 
 ;; profile
 (defwindow profile :stacking "fg" :focusable "false" :monitor 0 
-	    :geometry (geometry :x 150 :y 150 :width 350 :height 440)
+	    :geometry (geometry :x 150 :y 150 :width 350 :height 340)
 					(user))
 
 ;; system
 (defwindow system :stacking "fg" :focusable "false" :monitor 0 
-	    :geometry (geometry :x 150 :y 605 :width 350 :height 325)
+	    :geometry (geometry :x 150 :y 575 :width 350 :height 355)
 					(system))
 
 ;; clock
