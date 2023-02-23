@@ -11,8 +11,8 @@ fi
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-# ChatGPT key
-export OPENAI_API_KEY=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
+export HADOOP_CONF_DIR="/etc/hadoop"
+export JAVA_HOME="/usr/lib/jvm/default"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -118,6 +118,7 @@ alias zc="nvim ~/.zshrc"
 alias kc="nvim ~/.config/kitty"
 alias ec="nvim ~/.config/eww"
 alias sd="shutdown now"
+alias rb="reboot"
 
 
 

@@ -1,6 +1,6 @@
 local builtin = require('telescope.builtin')
 -- Search all files
-vim.keymap.set('n', '<leader>sa', builtin.find_files, {})
+vim.keymap.set('n', '<C-p>', builtin.find_files, {})
 -- Search all git files
 vim.keymap.set('n', '<leader>sg', builtin.git_files, {})
 -- Search all recent files

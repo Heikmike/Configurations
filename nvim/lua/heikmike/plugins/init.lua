@@ -8,12 +8,24 @@ return {
     },
     { 'nvim-treesitter/nvim-treesitter' },
     { 'nvim-lua/plenary.nvim' },
-    { 'ThePrimeagen/harpoon' },
+    { 'ThePrimeagen/harpoon',
+        config = function()
+            require("heikmike.plugins.configurations.harpoon")
+        end,
+    },
     { 'iamcco/markdown-preview.nvim' },
     { 'elkowar/yuck.vim' },
-    { 'lervag/vimtex' },
+    { 'lervag/vimtex',
+        config = function()
+            vim.api.nvim_command("source $HOME/.config/nvim/lua/heikmike/plugins/configurations/vimtex.vim")
+        end,
+    },
     { 'Fymyte/rasi.vim' },
-    { 'preservim/nerdcommenter' },
+    { 'preservim/nerdcommenter',
+        config = function()
+            vim.api.nvim_command("source $HOME/.config/nvim/lua/heikmike/plugins/configurations/nerdcommenter.vim")
+        end
+    },
     {
         'rose-pine/neovim',
         config = function()
@@ -21,7 +33,11 @@ return {
             vim.cmd('colorscheme rose-pine')
         end,
     },
-    { 'nvim-telescope/telescope.nvim' },
+    { 'nvim-telescope/telescope.nvim',
+        config = function()
+            require("heikmike.plugins.configurations.telescope")
+        end,
+    },
     { 'nvim-lua/plenary.nvim' },
     {
         'VonHeikemen/lsp-zero.nvim',
