@@ -1,0 +1,128 @@
+configuration {
+    show-icons: false;
+    icon-theme: "Tela-dark";
+    font: "Iosevka Nerd Font 12";
+    matching: "fuzzy";
+    fullscreen: false;
+}
+
+* {
+    font: "Roboto 11";
+    background: #0d1117;
+    background-alt: #161b22;
+    foreground: #c9d1d9;
+    grey: #8b949e;
+    red: #ffa198;
+    urgent: #BF616A;
+    radius: 10px;
+    border-radius: @radius;
+}
+
+window {
+    height: 60%;
+    width: 80%;
+
+    background-color: @background;
+    color: @foreground;
+    transparency: "real";
+    border-radius: @radius;
+}
+
+inputbar {
+    background-color: @background-alt;
+    text-color: @foreground;
+    border-radius: @radius;
+    padding: 1%;
+
+    children: [entry, prompt];
+}
+
+prompt {
+    enabled: false;
+    margin: 0 0.5em 0 0;
+}
+
+entry-wrapper {
+    orientation: horizontal;
+    margin: 0 12px 0 12px;
+    spacing: 24px;
+    vertical-align: 0.5;
+    children: [ entry ];
+}
+
+entry {
+    placeholder: "Search account";
+    placeholder-color: @grey;
+    border-radius: 0px;
+
+    background-color: inherit;
+    color: inherit;
+
+    blink: true;
+}
+
+mainbox {
+    children: [ inputbar, listview  ];
+
+    background-color: inherit;
+    color: inherit;
+    margin: 4% 3%;
+}
+
+listview {
+    columns: 1;
+    layout: vertical;
+
+    background-color: inherit;
+    color: inherit;
+    spacing: 0;
+    margin: 2% 0% 0% 0;
+}
+
+element {
+    background-color: inherit;
+    color: inherit;
+    orientation: vertical;
+    padding: 1.5% 1.5%;
+    border-radius: @radius;
+}
+
+element normal.urgent, element alternate.urgent {
+    background-color: @red;
+}
+
+element normal.active, element alternate.active {
+    background-color: @red;
+    color: @background;
+}
+
+element selected {
+    background-color: @red;
+    color: @background;
+}
+
+element selected.urgent {
+    background-color: @urgent;
+}
+
+element selected.active {
+    background-color: @background-alt;
+}
+
+element-icon {
+    size: 5%;
+    text-color: #ffffff;
+    fill: #ffffff;
+    horizontal-align: 0.5;
+    background-color: inherit;
+}
+
+element-icon selected {
+    background-color: inherit;
+}
+
+element-text {
+    background-color: inherit;
+    color: inherit;
+    horizontal-align: 0.5;
+}
