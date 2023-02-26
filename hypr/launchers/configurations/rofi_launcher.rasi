@@ -1,0 +1,118 @@
+configuration {
+    show-icons: true;
+    icon-theme: "Tela-dark";
+    matching: "fuzzy";
+    fullscreen: false;
+}
+
+* {
+    background: #0d1117;
+    background-alt: #161b22;
+    foreground: #c9d1d9;
+    grey: #8b949e;
+    red: #ffa198;
+    urgent: #BF616A;
+    radius: 10px;
+    border-radius: @radius;
+}
+
+window {
+    font: "Roboto 11";
+    location: west;
+    anchor: west;
+    x-offset: 10px;
+    height: 70%;
+    width: 350px;
+
+    background-color: @background;
+    color: @foreground;
+    transparency: "real";
+    border-radius: @radius;
+}
+
+inputbar {
+    background-color: @background-alt;
+    text-color: @foreground;
+    border-radius: @radius;
+    padding: 1%;
+
+    children: [entry, prompt];
+}
+
+prompt {
+    enabled: false;
+}
+
+entry {
+    placeholder-color: @grey;
+    placeholder: "Search configurations";
+
+    background-color: inherit;
+    color: inherit;
+
+    blink: true;
+    border-radius: 0px;
+}
+
+mainbox {
+    children: [ inputbar, listview  ];
+
+    background-color: inherit;
+    color: inherit;
+    margin: 2% 1%;
+}
+
+listview {
+    columns: 1;
+    layout: vertical;
+
+    background-color: inherit;
+    color: inherit;
+    spacing: 0;
+    margin: 2% 0% 0% 0;
+}
+
+element {
+    orientation: horizontal;
+    spacing: 1%;
+    children: [element-icon, element-text];
+    background-color: inherit;
+    color: inherit;
+    padding: 1% 1%;
+    border-radius: @radius;
+}
+
+element normal.urgent, element alternate.urgent {
+    background-color: @red;
+}
+
+element normal.active, element alternate.active {
+    background-color: @red;
+    color: @selected-text-color;
+}
+
+element selected {
+    background-color: @red;
+    color: @background;
+}
+
+element selected.urgent {
+    background-color: @urgent;
+}
+
+element selected.active {
+    background-color: @background-alt;
+}
+
+element-icon {
+    background-color: inherit;
+    size: 2%;
+    vertical-align: 0.5;
+}
+
+element-text {
+    background-color: inherit;
+    color: inherit;
+    horizontal-align: 0;
+    padding: 0.5% 0% 0% 0%;
+}

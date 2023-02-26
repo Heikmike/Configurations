@@ -1,4 +1,5 @@
 return {
+    { 'tikhomirov/vim-glsl' },
     { 'Pocco81/auto-save.nvim' },
     { 'savq/melange-nvim' },
     { 'github/copilot.vim',

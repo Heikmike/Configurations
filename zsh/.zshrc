@@ -112,11 +112,11 @@ source $ZSH/oh-my-zsh.sh
 alias v=nvim
 alias c=clear
 alias cdc="cd $HOME/Documents/Repositories/Configurations"
-alias nc="nvim ~/.config/nvim"
-alias hc="nvim ~/.config/hypr/hyprland.conf"
-alias zc="nvim ~/.zshrc"
-alias kc="nvim ~/.config/kitty"
-alias ec="nvim ~/.config/eww"
+alias nc="cd ~/.config/nvim && nvim ."
+alias hc="cd ~/.config/hypr/ && nvim hyprland.conf"
+alias zc="cd ~/ && nvim .zshrc"
+alias kc="cd ~/.config/kitty && nvim kitty.conf"
+alias ec="cd ~/.config/eww && nvim ."
 alias sd="shutdown now"
 alias rb="reboot"
 
