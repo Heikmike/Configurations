@@ -218,90 +218,90 @@
 
 ;; background
 (defwindow background :stacking "fg" :focusable "false" :monitor 0 
-	    :geometry (geometry :x 0 :y 0 :width "1920px" :height "1080px")
+	    :geometry (geometry :x 0 :y 0 :width "1920px" :height "1200px")
 					(bg))
 
 ;; profile
 (defwindow profile :stacking "fg" :focusable "false" :monitor 0 
-	    :geometry (geometry :x 150 :y 150 :width 350 :height 340)
+	    :geometry (geometry :x 150 :y 210 :width 350 :height 340)
 					(user))
 
 ;; system
 (defwindow system :stacking "fg" :focusable "false" :monitor 0 
-	    :geometry (geometry :x 150 :y 575 :width 350 :height 355)
+	    :geometry (geometry :x 150 :y 630 :width 350 :height 355)
 					(system))
 
 ;; clock
 (defwindow clock :stacking "fg" :focusable "false" :monitor 0 
-	    :geometry (geometry :x 515 :y 150 :width 300 :height 155)
+	    :geometry (geometry :x 515 :y 210 :width 300 :height 155)
 					(clock))
 
 ;; uptime
 (defwindow uptime :stacking "fg" :focusable "false" :monitor 0 
-	    :geometry (geometry :x 515 :y 320 :width 350 :height 155)
+	    :geometry (geometry :x 515 :y 380 :width 350 :height 155)
 					(uptime))
 
 ;; music
 (defwindow music :stacking "fg" :focusable "false" :monitor 0
-        :geometry (geometry :x 515 :y 490 :width 610 :height 280)
+        :geometry (geometry :x 515 :y 550 :width 610 :height 280)
                     (music))
 
 ;; github
 (defwindow github :stacking "fg" :focusable "false" :monitor 0 
-	    :geometry (geometry :x 515 :y 785 :width 141 :height 145)
+	    :geometry (geometry :x 515 :y 845 :width 141 :height 145)
 					(github))
 
 ;; reddit
 (defwindow reddit :stacking "fg" :focusable "false" :monitor 0 
-	    :geometry (geometry :x 671 :y 785 :width 141 :height 145)
+	    :geometry (geometry :x 671 :y 845 :width 141 :height 145)
 					(reddit))
 
 ;; twitter
 (defwindow twitter :stacking "fg" :focusable "false" :monitor 0 
-	    :geometry (geometry :x 827 :y 785 :width 141 :height 145)
+	    :geometry (geometry :x 827 :y 845 :width 141 :height 145)
 					(twitter))
 
 ;; youtube
 (defwindow youtube :stacking "fg" :focusable "false" :monitor 0 
-	    :geometry (geometry :x 983 :y 785 :width 142 :height 145)
+	    :geometry (geometry :x 983 :y 845 :width 142 :height 145)
 					(youtube))
 
 ;; weather
 (defwindow weather :stacking "fg" :focusable "false" :monitor 0 
-	    :geometry (geometry :x 880 :y 150 :width 550 :height 325)
+	    :geometry (geometry :x 880 :y 210 :width 550 :height 325)
 					(weather))
 
 ;; apps
 (defwindow apps :stacking "fg" :focusable "false" :monitor 0 
-	    :geometry (geometry :x 1140 :y 490 :width 290 :height 280)
+	    :geometry (geometry :x 1140 :y 550 :width 290 :height 280)
 					(apps))
 
 ;; mail
 (defwindow mail :stacking "fg" :focusable "false" :monitor 0 
-	    :geometry (geometry :x 1140 :y 785 :width 290 :height 145)
+	    :geometry (geometry :x 1140 :y 845 :width 290 :height 145)
 					(mail))
 
 ;; logout
 (defwindow logout :stacking "fg" :focusable "false" :monitor 0 
-	    :geometry (geometry :x 1445 :y 150 :width 155 :height 155)
+	    :geometry (geometry :x 1445 :y 210 :width 155 :height 155)
 					(logout))
 
 ;; sleep
 (defwindow sleep :stacking "fg" :focusable "false" :monitor 0 
-	    :geometry (geometry :x 1615 :y 150 :width 155 :height 155)
+	    :geometry (geometry :x 1615 :y 210 :width 155 :height 155)
 					(sleep))
 
 ;; reboot
 (defwindow reboot :stacking "fg" :focusable "false" :monitor 0 
-	    :geometry (geometry :x 1445 :y 320 :width 155 :height 155)
+	    :geometry (geometry :x 1445 :y 380 :width 155 :height 155)
 					(reboot))
 
 ;; poweroff
 (defwindow poweroff :stacking "fg" :focusable "false" :monitor 0 
-	    :geometry (geometry :x 1615 :y 320 :width 155 :height 155)
+	    :geometry (geometry :x 1615 :y 380 :width 155 :height 155)
 					(poweroff))
 
 ;; folders
 (defwindow folders :stacking "fg" :focusable "false" :monitor 0 
-	    :geometry (geometry :x 1445 :y 490 :width 325 :height 440)
+	    :geometry (geometry :x 1445 :y 550 :width 325 :height 440)
 					(folders))
