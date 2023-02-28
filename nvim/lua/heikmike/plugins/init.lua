@@ -1,4 +1,6 @@
 return {
+    { 'tpope/vim-fugitive' },
+    { 'tpope/vim-surround' },
     { 'tikhomirov/vim-glsl' },
     { 'Pocco81/auto-save.nvim' },
     { 'savq/melange-nvim' },
@@ -22,11 +24,11 @@ return {
         end,
     },
     { 'Fymyte/rasi.vim' },
-    { 'preservim/nerdcommenter',
-        config = function()
-            vim.api.nvim_command("source $HOME/.config/nvim/lua/heikmike/plugins/configurations/nerdcommenter.vim")
-        end
-    },
+    -- { 'preservim/nerdcommenter',
+    --     config = function()
+    --         vim.api.nvim_command("source $HOME/.config/nvim/lua/heikmike/plugins/configurations/nerdcommenter.vim")
+    --     end
+    -- },
     {
         'rose-pine/neovim',
         config = function()
@@ -74,4 +76,17 @@ return {
             require("heikmike.plugins.configurations.lsp")
         end,
     },
+
+    {
+        "folke/todo-comments.nvim",
+        config = function()
+            require("heikmike.plugins.configurations.todo-comments")
+        end,
+    },
+    {
+        'numToStr/Comment.nvim',
+        config = function()
+            require("heikmike.plugins.configurations.comment")
+        end,
+    }
 }

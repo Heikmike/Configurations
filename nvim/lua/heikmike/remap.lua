@@ -1,6 +1,6 @@
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>h", vim.cmd.Ex)
-vim.keymap.set("n", "<leader>y", 'Vyp') 
+vim.keymap.set("n", "<leader>y", 'Vyp')
 vim.keymap.set("n", ",", "/")
 vim.keymap.set("n", "cg", "f\"ci\"")
 vim.keymap.set("n", "cp", "ci(")
@@ -13,3 +13,4 @@ vim.keymap.set("i", "<", "\\")
 vim.keymap.set("i", "\\", "<")
 vim.keymap.set("v", "<leader>y", '"+y')
 vim.keymap.set("n", "U", '<C-R>')
+vim.keymap.set("n", "<leader><leader>", ":bu#<CR>")
