@@ -1,4 +1,9 @@
 return {
+    { "xiyaowong/nvim-transparent" },
+    { "projekt0n/github-nvim-theme" },
+    { "nvim-lualine/lualine.nvim",
+        config = function() require("heikmike.plugins.configurations.lualine") end,
+    },
     { 'tpope/vim-fugitive' },
     { 'tpope/vim-surround' },
     { 'tikhomirov/vim-glsl' },

@@ -1,5 +1,5 @@
 configuration {
-    show-icons: false;
+    show-icons: true;
     icon-theme: "Tela-dark";
     font: "Iosevka Nerd Font 12";
     matching: "fuzzy";
@@ -47,12 +47,13 @@ entry-wrapper {
     margin: 0 12px 0 12px;
     spacing: 24px;
     vertical-align: 0.5;
+    background-color: @transparent;
     children: [ entry ];
 }
 
 entry {
-    placeholder: "Search account";
     placeholder-color: @grey;
+    placeholder: "Search wallpapers";
     border-radius: 0px;
 
     background-color: inherit;
@@ -70,7 +71,7 @@ mainbox {
 }
 
 listview {
-    columns: 1;
+    columns: 4;
     layout: vertical;
 
     background-color: inherit;
@@ -83,8 +84,11 @@ element {
     background-color: inherit;
     color: inherit;
     orientation: vertical;
-    padding: 1.5% 1.5%;
     border-radius: @radius;
+    margin: 0%;
+    padding: 0%;
+
+    children: [element-icon];
 }
 
 element normal.urgent, element alternate.urgent {
@@ -93,7 +97,7 @@ element normal.urgent, element alternate.urgent {
 
 element normal.active, element alternate.active {
     background-color: @red;
-    color: @background;
+    color: @selected-text-color;
 }
 
 element selected {
@@ -110,11 +114,13 @@ element selected.active {
 }
 
 element-icon {
-    size: 5%;
+    size: 23%;
     text-color: #ffffff;
     fill: #ffffff;
     horizontal-align: 0.5;
     background-color: inherit;
+    margin: 0%;
+    padding: 0%;
 }
 
 element-icon selected {

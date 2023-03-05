@@ -37,8 +37,8 @@ end
 function PasteImageInLatex()
     local image_name = ClipboardImageToFile()
 
-    local image = '\\begin{figure}[h]\n\\centering\n\\caption{}\n\\label{fig:}\n\\includegraphics[width=8cm]{' ..
-        image_name .. '}\n\\end{figure}'
+    local image = '\\begin{figure}[h]\n\\includegraphics[width=8cm]{' ..
+        image_name .. '}\n\\centering\n\\caption{}\n\\label{fig:}\n\\end{figure}'
     vim.fn.setreg('l', image)
     vim.cmd('normal! "lp')
 end
