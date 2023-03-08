@@ -1,4 +1,7 @@
 return {
+    { 'projekt0n/github-nvim-theme',
+        config = function() require("heikmike.plugins.configurations.github-theme") end,
+    },
     { "xiyaowong/nvim-transparent" },
     { "projekt0n/github-nvim-theme" },
     { "nvim-lualine/lualine.nvim",
@@ -14,7 +17,11 @@ return {
             vim.api.nvim_command("source $HOME/.config/nvim/lua/heikmike/plugins/configurations/copilot.vim")
         end
     },
-    { 'nvim-treesitter/nvim-treesitter' },
+    { 'nvim-treesitter/nvim-treesitter',
+        config = function()
+            require("heikmike.plugins.configurations.treesitter")
+        end,
+    },
     { 'nvim-lua/plenary.nvim' },
     { 'ThePrimeagen/harpoon',
         config = function()
