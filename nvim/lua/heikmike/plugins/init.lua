@@ -3,7 +3,6 @@ return {
         config = function() require("heikmike.plugins.configurations.github-theme") end,
     },
     { "xiyaowong/nvim-transparent" },
-    { "projekt0n/github-nvim-theme" },
     { "nvim-lualine/lualine.nvim",
         config = function() require("heikmike.plugins.configurations.lualine") end,
     },
@@ -11,7 +10,6 @@ return {
     { 'tpope/vim-surround' },
     { 'tikhomirov/vim-glsl' },
     { 'Pocco81/auto-save.nvim' },
-    { 'savq/melange-nvim' },
     { 'github/copilot.vim',
         config = function()
             vim.api.nvim_command("source $HOME/.config/nvim/lua/heikmike/plugins/configurations/copilot.vim")
