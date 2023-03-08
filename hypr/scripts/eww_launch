@@ -2,8 +2,7 @@
 
 eww daemon
 eww open --toggle welcome
-wpaperd
-sleep 2
+sleep 2.0
 eww open --toggle welcome
 sleep 0.5
 /home/heikmike/.config/eww/dashboard/launch_dashboard
