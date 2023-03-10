@@ -7,6 +7,8 @@ filetype plugin indent on
 " info).
 syntax enable
 
+let g:vimtex_quickfix_mode = 0
+
 " Viewer options: One may configure the viewer either by specifying a built-in
 " viewer method:
 let g:vimtex_view_method = 'zathura'
