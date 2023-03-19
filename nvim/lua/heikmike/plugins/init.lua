@@ -1,4 +1,5 @@
 return {
+    { 'tpope/vim-fugitive' },
     { 'projekt0n/github-nvim-theme',
         config = function() require("heikmike.plugins.configurations.github-theme") end,
     },
