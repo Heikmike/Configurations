@@ -14,6 +14,7 @@ export ZSH="$HOME/.oh-my-zsh"
 export HADOOP_CONF_DIR="/etc/hadoop"
 export JAVA_HOME="/usr/lib/jvm/default"
 export XDG_SCREENSHOTS_DIR="$HOME/Pictures/Screenshots"
+export PATH=~/.local/share/coursier/bin:$PATH
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -110,6 +111,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias u=unzip
 alias v=nvim
 alias c=clear
 alias cdc="cd $HOME/Documents/Repositories/Configurations"
