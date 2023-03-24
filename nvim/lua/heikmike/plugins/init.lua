@@ -1,4 +1,15 @@
 return {
+    { "goolord/alpha-nvim",
+        config = function()
+            require("heikmike.plugins.configurations.alpha")
+        end,
+    },
+    { 'scalameta/nvim-metals',
+        config = function() require("heikmike.plugins.configurations.metals") end,
+    },
+    {  "mfussenegger/nvim-dap" },
+    { 'tree-sitter/tree-sitter-scala' },
+    { 'jiangmiao/auto-pairs' },
     { 'tpope/vim-fugitive' },
     { 'projekt0n/github-nvim-theme',
         config = function() require("heikmike.plugins.configurations.github-theme") end,
@@ -67,7 +78,9 @@ return {
                 config = function()
                     require("heikmike.plugins.configurations.cmp")
                 end,
-            }, -- Required
+            }, -- Required 
+            { "hrsh7th/cmp-vsnip" },
+            { "hrsh7th/vim-vsnip" },
             { 'hrsh7th/cmp-nvim-lsp' }, -- Required
             { 'hrsh7th/cmp-buffer' }, -- Optional
             { 'hrsh7th/cmp-path' }, -- Optional

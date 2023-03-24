@@ -2,6 +2,5 @@ let g:copilot_filetypes = {
       \ '*': v:true,
       \ }
 
-let g:copilot_no_tab_map = v:false
-
-inoremap <expr> <C-CR> copilot#Accept()
+imap <silent><script><expr> <C-CR> copilot#Accept('\<CR>')
+let g:copilot_no_tab_map = v:true
