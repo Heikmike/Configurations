@@ -1,4 +1,7 @@
 return {
+    { 'catppuccin/nvim',
+        config = function () require("heikmike.plugins.configurations.catppuccin") end,
+    },
     { "goolord/alpha-nvim",
         config = function()
             require("heikmike.plugins.configurations.alpha")
