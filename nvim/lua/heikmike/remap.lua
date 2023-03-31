@@ -33,3 +33,6 @@ keymap("n", "<leader>gu", ":Git pull<CR>")
 keymap("n", "<leader>gl", ":Git la<CR> | :only<CR>")
 keymap("n", "<leader>gd", ":Git diff<CR> | :only<CR>")
 keymap("n", "<leader>gs", ":Git status<CR>")
+
+-- Open configs
+keymap("n", "<leader>nc", ":e ~/.config/nvim<CR> | :cd ~/.config/nvim<CR>")
