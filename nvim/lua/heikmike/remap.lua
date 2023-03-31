@@ -24,9 +24,9 @@ keymap("n", ",", "/")
 keymap("n", "U", '<C-R>')
 
 -- Git
-keymap("n", "<leader>g", ":Git<CR> | :only<CR>")
+keymap("n", "<leader>gg", ":Git<CR> | :only<CR>")
 keymap("n", "<leader>ga", ":Git add .<CR>")
-keymap("n", "<leader>gc", ":Git commit<CR>")
+keymap("n", "<leader>gc", ":Git commit<CR> | :only<CR>")
 keymap("n", "<leader>gp", ":Git push<CR>")
 keymap("n", "<leader>gl", ":Git la<CR> | :only<CR>")
 keymap("n", "<leader>gd", ":Git diff<CR> | :only<CR>")

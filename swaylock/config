@@ -11,9 +11,9 @@ inside-ver-color=00DEFF
 inside-wrong-color=FF0000
 
 text-color=FFFFFF
-text-clear-color=FFFFFF
-text-ver-color=FFFFFF
-text-wrong-color=FFFFFF
+text-clear-color=E3B341
+text-ver-color=00DEFF
+text-wrong-color=FF0000
 
 key-hl-color=FFFFFF
 layout-border-color=ffa198
@@ -26,11 +26,10 @@ ring-wrong-color=FF0000
 line-uses-inside
 
 screenshots
-clock
-indicator
-indicator-radius=100
-indicator-thickness=15
-effect-blur=7x5
+indicator-radius=50
+indicator-thickness=5
+indicator-y-position=1100
+efect-blur=7x5
 effect-vignette=0.5:0.5
 grace=0
 fade-in=0.2
