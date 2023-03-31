@@ -1,4 +1,10 @@
 return {
+    { 'nvim-tree/nvim-web-devicons' },
+    { 'vimwiki/vimwiki',
+        config = function()
+            vim.api.nvim_command("source $HOME/.config/nvim/lua/heikmike/plugins/configurations/vimwiki.vim")
+        end
+    },
     { 'catppuccin/nvim',
         config = function () require("heikmike.plugins.configurations.catppuccin") end,
     },
