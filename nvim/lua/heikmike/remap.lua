@@ -6,11 +6,12 @@ vim.g.mapleader = " "
 keymap("n", "<leader>h", vim.cmd.Ex)
 keymap("n", "<leader>al", vim.cmd.Alpha)
 keymap("n", "<leader><leader>", ":bu#<CR>")
+keymap("n", "<leader>+", ":horizontal resize +5<CR>")
+keymap("n", "<leader>-", ":horizontal resize -5<CR>")
 
 -- Copy and paste
 keymap("n", "<leader>y", 'Vyp')
 keymap("v", "<leader>y", '"+y')
-
 
 -- Change in surroundings
 keymap("n", "cb", "f{ci{")
