@@ -1,4 +1,7 @@
 return {
+    { 'junegunn/vim-easy-align',
+        config = function() require("heikmike.plugins.configurations.align") end,
+    },
     { 'nvim-tree/nvim-web-devicons' },
     { 'vimwiki/vimwiki',
         config = function()
