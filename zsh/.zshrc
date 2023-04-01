@@ -21,6 +21,7 @@ export JAVA_HOME="/usr/lib/jvm/default"
 export XDG_SCREENSHOTS_DIR="$HOME/Pictures/Screenshots"
 export PATH=~/.local/share/coursier/bin:$PATH
 export MOZ_ENABLE_WAYLAND=1
+export CHROME_EXECUTABLE=google-chrome-stable
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
