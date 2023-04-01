@@ -1,4 +1,7 @@
 return {
+    { 'akinsho/flutter-tools.nvim',
+        config = function() require("heikmike.plugins.configurations.flutter") end,
+    },
     { 'junegunn/vim-easy-align',
         config = function() require("heikmike.plugins.configurations.align") end,
     },

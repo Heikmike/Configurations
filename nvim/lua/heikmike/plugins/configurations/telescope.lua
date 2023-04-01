@@ -1,6 +1,7 @@
 local keymap = vim.keymap.set
 local opts = {noremap = true, silent = true}
 local actions = require('telescope.actions')
+require("telescope").load_extension("flutter")
 
 require('telescope').setup {
     defaults = {
@@ -27,3 +28,4 @@ keymap('n', '<C-h>', ':Telescope command_history<CR>', opts)
 keymap('n', '<C-p>', ':Telescope find_files<CR>', opts)
 keymap('n', '<C-B>', ':Telescope buffers<CR>', opts)
 keymap('n', '<C-F>', ':Telescope live_grep<CR>', opts)
+keymap('n', '<leader>fl', ':Telescope flutter commands<CR>', opts)
