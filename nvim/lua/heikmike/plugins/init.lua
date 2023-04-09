@@ -1,4 +1,7 @@
 return {
+    { 'sindrets/diffview.nvim',
+        config = function() require("heikmike.plugins.configurations.diffview") end,
+    },
     { 'akinsho/flutter-tools.nvim',
         config = function() require("heikmike.plugins.configurations.flutter") end,
     },

@@ -9,6 +9,7 @@ keymap("n", "<leader><leader>", ":bu#<CR>")
 keymap("n", "<leader>+", ":horizontal resize +5<CR>")
 keymap("n", "<leader>-", ":horizontal resize -5<CR>")
 keymap("n", "<leader>on", ":only<CR>")
+keymap("n", "<leader>tc", ":tabclose<CR>")
 
 -- Copy and paste
 keymap("n", "<leader>y", 'Vyp')
@@ -32,7 +33,8 @@ keymap("n", "<leader>gc", ":Git commit<CR> | :only<CR>")
 keymap("n", "<leader>gp", ":Git push<CR>")
 keymap("n", "<leader>gf ", ":Git pull<CR>")
 keymap("n", "<leader>gl", ":Git la<CR> | :only<CR>")
-keymap("n", "<leader>gd", ":Git diff<CR> | :only<CR>")
+keymap("n", "<leader>gd", ":DiffviewOpen<CR>")
+keymap("n", "<leader>tt", ":DiffviewToggleFiles<CR>")
 keymap("n", "<leader>gs", ":Git status<CR>")
 keymap("n", "<leader>gb", ":Git branch<CR>")
 

@@ -23,6 +23,23 @@ require('telescope').setup {
     extensions = {}
 }
 
+local function getVisualSelection()
+	vim.cmd('noau normal! "vy"')
+	local text = vim.fn.getreg("v")
+	vim.fn.setreg("v", {})
+
+	text = string.gsub(text, "\n", "")
+	if #text > 0 then
+		return text
+	else
+		return ""
+	end
+end
+
+keymap("v", "<C-f>", function()
+	local text = getVisualSelection()
+	require("telescope.builtin").live_grep({ default_text = text })
+end, opts)
 keymap('n', '<A-c>', ':Telescope commands<CR>', opts)
 keymap('n', '<C-h>', ':Telescope command_history<CR>', opts)
 keymap('n', '<C-p>', ':Telescope find_files<CR>', opts)
