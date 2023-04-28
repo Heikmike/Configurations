@@ -1,4 +1,11 @@
 return {
+    { "MunifTanjim/nui.nvim" },
+    { "nvim-neo-tree/neo-tree.nvim",
+        config = function()
+            require("heikmike.plugins.configurations.neotree")
+        end
+    },
+    { 'preservim/vim-pencil' },
     { 'sindrets/diffview.nvim',
         config = function() require("heikmike.plugins.configurations.diffview") end,
     },
@@ -15,7 +22,7 @@ return {
         end
     },
     { 'catppuccin/nvim',
-        config = function () require("heikmike.plugins.configurations.catppuccin") end,
+        config = function() require("heikmike.plugins.configurations.catppuccin") end,
     },
     { "goolord/alpha-nvim",
         config = function()
@@ -25,7 +32,7 @@ return {
     { 'scalameta/nvim-metals',
         config = function() require("heikmike.plugins.configurations.metals") end,
     },
-    {  "mfussenegger/nvim-dap" },
+    { "mfussenegger/nvim-dap" },
     { 'tree-sitter/tree-sitter-scala' },
     { 'jiangmiao/auto-pairs' },
     { 'tpope/vim-fugitive' },
@@ -56,7 +63,12 @@ return {
             require("heikmike.plugins.configurations.harpoon")
         end,
     },
-    { 'iamcco/markdown-preview.nvim' },
+    { 'iamcco/markdown-preview.nvim',
+        config = function()
+            vim.api.nvim_command(
+                "source $HOME/.config/nvim/lua/heikmike/plugins/configurations/markdown-preview.vim")
+        end,
+    },
     { 'elkowar/yuck.vim' },
     { 'lervag/vimtex',
         config = function()
@@ -96,7 +108,7 @@ return {
                 config = function()
                     require("heikmike.plugins.configurations.cmp")
                 end,
-            }, -- Required 
+            }, -- Required
             { "hrsh7th/cmp-vsnip" },
             { "hrsh7th/vim-vsnip" },
             { 'hrsh7th/cmp-nvim-lsp' }, -- Required

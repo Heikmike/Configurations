@@ -10,6 +10,7 @@ keymap("n", "<leader>+", ":horizontal resize +5<CR>")
 keymap("n", "<leader>-", ":horizontal resize -5<CR>")
 keymap("n", "<leader>on", ":only<CR>")
 keymap("n", "<leader>tc", ":tabclose<CR>")
+keymap("n", "<C-D>", "<C-F>")
 
 -- Copy and paste
 keymap("n", "<leader>y", 'Vyp')

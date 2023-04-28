@@ -129,6 +129,7 @@ alias kc="cd ~/.config/kitty && nvim kitty.conf"
 alias ec="cd ~/.config/eww && nvim ."
 alias sd="shutdown now"
 alias rb="reboot"
+alias cat="bat"
 
 
 
@@ -161,3 +162,7 @@ export FZF_CTRL_T_COMMAND=$FZF_DEFAULT_COMMAND
 export FZF_ALT_C_COMMAND='fd --type d --hidden --follow --exclude ".git,node_modules"'
 export FZF_DEFAULT_OPTS='--height 40% --layout=reverse'
 export FZF_COMPLETION_TRIGGER='**'
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
