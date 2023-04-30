@@ -40,11 +40,12 @@ local coc_extension = {
 require'lualine'.setup {
     options = {
         icons_enabled = true,
-        theme = github_theme,
+        theme = 'catppuccin',
         section_separators = {left = '', right = ''},
         component_separators = {left = '|', right = '|'},
-        disabled_filetypes = { 'alpha' },
-        always_divide_middle = true
+        disabled_filetypes = { 'alpha', 'neo-tree' },
+        always_divide_middle = true,
+        globalstatus = true
     },
     sections = {
         lualine_a = {{'mode', separator = {left = '', right = ''}}},
@@ -66,7 +67,7 @@ require'lualine'.setup {
         lualine_z = {{'location', separator = {left = '', right = ''}}}
     },
     tabline = {},
-    extensions = {coc_extension}
+    extensions = {coc_extension},
 }
 
 require("transparent").setup({enable = true, extra_groups = {}, exclude = {}})

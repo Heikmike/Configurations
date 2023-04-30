@@ -1,0 +1,2 @@
+-- vim.cmd(":TransparentToggle")
+-- vim.cmd(":Goyo")

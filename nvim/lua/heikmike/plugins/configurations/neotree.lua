@@ -68,7 +68,7 @@ require("neo-tree").setup({
 		},
 	},
 	window = {
-		position = "left",
+		position = "float",
 		width = 40,
 		mapping_options = { noremap = true, nowait = true },
 		mappings = {
@@ -162,7 +162,7 @@ require("neo-tree").setup({
 				["<bs>"] = "navigate_up",
 				-- ["."] = "set_root",
 				["."] = "toggle_hidden",
-				["/"] = "fuzzy_finder",
+				[","] = "fuzzy_finder",
 				["D"] = "fuzzy_finder_directory",
 				["f"] = "filter_on_submit",
 				["<c-x>"] = "clear_filter",

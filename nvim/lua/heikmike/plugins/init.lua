@@ -1,4 +1,9 @@
 return {
+    { 'junegunn/seoul256.vim' },
+    { 'junegunn/goyo.vim',
+        config = function() vim.api.nvim_command("source $HOME/.config/nvim/lua/heikmike/plugins/configurations/goyo.vim") end,
+    },
+    { 'folke/lsp-colors.nvim' },
     { "MunifTanjim/nui.nvim" },
     { "nvim-neo-tree/neo-tree.nvim",
         config = function()
@@ -35,7 +40,6 @@ return {
     { "mfussenegger/nvim-dap" },
     { 'tree-sitter/tree-sitter-scala' },
     { 'jiangmiao/auto-pairs' },
-    { 'tpope/vim-fugitive' },
     { 'projekt0n/github-nvim-theme',
         config = function() require("heikmike.plugins.configurations.github-theme") end,
     },
