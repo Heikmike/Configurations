@@ -20,6 +20,7 @@ export HADOOP_CONF_DIR="/etc/hadoop"
 export JAVA_HOME="/usr/lib/jvm/default"
 export XDG_SCREENSHOTS_DIR="$HOME/Pictures/Screenshots"
 export PATH=~/.local/share/coursier/bin:$PATH
+export PATH=$PATH:/usr/local/go/bin
 export MOZ_ENABLE_WAYLAND=1
 export CHROME_EXECUTABLE=google-chrome-stable
 
@@ -118,8 +119,10 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias dc=docker-compose
 alias u=unzip
 alias v=nvim
+alias vim=nvim
 alias c=clear
 alias cdc="cd $HOME/Documents/Repositories/Configurations"
 alias nc="cd ~/.config/nvim && nvim ."

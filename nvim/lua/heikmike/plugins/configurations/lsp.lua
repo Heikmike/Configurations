@@ -23,7 +23,7 @@ lsp.ensure_installed({
 })
 lsp.skip_server_setup({ 'rust_analyzer' })
 
-lsp.on_attach(function(client, bufnr)
+lsp.on_attach(function(_, bufnr)
   local opts = { buffer = bufnr }
   local bind = vim.keymap.set
 
