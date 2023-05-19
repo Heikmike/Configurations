@@ -10,7 +10,7 @@ while true; do
     # Check if the battery percentage is below the threshold
     if [[ $BATTERY_PERCENTAGE -lt $MIN_BATTERY_PERCENTAGE ]]; then
         # Send a notification using Dunst
-        dunstify "Battery Low" "Battery level is ${BATTERY_PERCENTAGE}%. Please connect your charger."
+        dunstify --urgency=critical "Battery Low" "Battery is at ${BATTERY_PERCENTAGE}%."
     fi
 
     # Sleep for 5 minutes before checking again
