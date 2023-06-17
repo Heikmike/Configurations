@@ -1,34 +1,39 @@
 ignore-empty-password
 hide-keyboard-layout
 disable-caps-lock-text
-font=Roboto
+indicator-caps-lock
+image=~/Pictures/arch.png
+scaling=center
 
-color=0D1117
+font-size=30
 
-inside-color=000000
-inside-clear-color=E3B341
-inside-ver-color=00DEFF
+color=26292E
+
+inside-color=E5507300
+inside-clear-color=E3B34100
+inside-ver-color=00DEFF00
 inside-wrong-color=FF0000
 
 text-color=FFFFFF
-text-clear-color=E3B341
-text-ver-color=00DEFF
+text-clear-color=26292E
+text-ver-color=26292E
 text-wrong-color=FF0000
+font-size=0
 
 key-hl-color=FFFFFF
-layout-border-color=ffa198
 
-ring-color=000000
+ring-color=E5507300
 ring-clear-color=E3B341
 ring-ver-color=00DEFF
 ring-wrong-color=FF0000
 
-line-uses-inside
+separator-color=FFFFFF
 
-screenshots
-indicator-radius=50
-indicator-thickness=5
-indicator-y-position=1100
+line-uses-ring
+
+indicator-radius=16
+indicator-thickness=3
+indicator-y-position=807
 efect-blur=7x5
 effect-vignette=0.5:0.5
 grace=0
