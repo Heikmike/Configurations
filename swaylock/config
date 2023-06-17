@@ -2,10 +2,8 @@ ignore-empty-password
 hide-keyboard-layout
 disable-caps-lock-text
 indicator-caps-lock
-image=~/Pictures/arch.png
+image=/home/heikmike/Documents/Repositories/Configurations/swaylock/images/arch.png
 scaling=center
-
-font-size=30
 
 color=26292E
 
