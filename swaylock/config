@@ -10,20 +10,20 @@ color=26292E
 inside-color=E5507300
 inside-clear-color=E3B34100
 inside-ver-color=00DEFF00
-inside-wrong-color=FF0000
+inside-wrong-color=E55073
 
 text-color=FFFFFF
 text-clear-color=26292E
 text-ver-color=26292E
-text-wrong-color=FF0000
+text-wrong-color=E55073
 font-size=0
 
 key-hl-color=FFFFFF
 
 ring-color=E5507300
 ring-clear-color=E3B341
-ring-ver-color=00DEFF
-ring-wrong-color=FF0000
+ring-ver-color=5F9BC9
+ring-wrong-color=E55073
 
 separator-color=FFFFFF
 
