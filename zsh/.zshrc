@@ -85,6 +85,10 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
+function zvm_after_init() {
+  [[ $- == *i* ]] && source "/usr/share/fzf/completion.zsh" 2> /dev/null
+  [[ $- == *i* ]] && source "/usr/share/fzf/key-bindings.zsh" 2> /dev/null
+}
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
@@ -119,6 +123,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias vg="nvim -c 'MyGit'"
 alias py3=python3
 alias dc=docker-compose
 alias u=unzip
@@ -158,8 +163,6 @@ unset __conda_setup
 export PATH=/usr/local/tranquil/bin:$PATH
 
 # FZF
-[[ $- == *i* ]] && source "/usr/share/fzf/completion.zsh" 2> /dev/null
-[[ $- == *i* ]] && source "/usr/share/fzf/key-bindings.zsh" 2> /dev/null
 
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore --follow -g "!{.git,*/**/.git,*/**/node_modules,out,*/**/out,CMakeFiles, */**/CMakeFiles}/*" 2> /dev/null'
 export FZF_CTRL_T_COMMAND=$FZF_DEFAULT_COMMAND
