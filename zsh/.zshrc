@@ -123,6 +123,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias dow="cd ~/Downloads"
 alias vg="nvim -c 'MyGit'"
 alias py3=python3
 alias dc=docker-compose
