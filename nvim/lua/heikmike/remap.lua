@@ -3,7 +3,7 @@ local keymap = vim.keymap.set
 vim.g.mapleader = " "
 
 -- Buffer things
-keymap("n", "<leader>h", vim.cmd.Ex)
+-- keymap("n", "<leader>h", vim.cmd.Ex)
 keymap("n", "<leader>al", vim.cmd.Alpha)
 keymap("n", "<leader><leader>", ":bu#<CR>")
 keymap("n", "<leader>+", ":horizontal resize +5<CR>")
