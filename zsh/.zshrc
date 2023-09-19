@@ -123,6 +123,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias ls="eza --icons --sort=name -l --no-user -h --no-permissions"
 alias zathura="zathura --fork"
 alias doc="cd ~/Documents"
 alias dow="cd ~/Downloads"
