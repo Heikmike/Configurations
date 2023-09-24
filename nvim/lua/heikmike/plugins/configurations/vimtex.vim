@@ -1,37 +1,11 @@
-let g:tex_flavor = 'latex'
-let g:coc_filetype_map = {'tex': 'latex'}
+" This is necessary for VimTeX to load properly. The "indent" is optional.
+" Note that most plugin managers will do this automatically.
+filetype plugin indent on
+
+" This enables Vim's and neovim's syntax-related features. Without this, some
+" VimTeX features will not work (see ":help vimtex-requirements" for more
+" info).
+syntax enable
+
 let g:vimtex_view_method = 'zathura'
-let g:vimtex_quickfix_mode = 0
-
-let g:vimtex_compiler_latexmk_engines = {
-    \ '_'                : '-xelatex',
-    \ 'pdflatex'         : '-pdf',
-    \ 'dvipdfex'         : '-pdfdvi',
-    \ 'lualatex'         : '-lualatex',
-    \ 'xelatex'          : '-xelatex',
-    \ 'context (pdftex)' : '-pdf -pdflatex=texexec',
-    \ 'context (luatex)' : '-pdf -pdflatex=context',
-    \ 'context (xetex)'  : '-pdf -pdflatex=''texexec --xtx''',
-    \}
-
-let g:vimtex_compiler_latexmk = {
-    \ 'out_dir' : 'out',
-    \ 'callback' : 1,
-    \ 'continuous' : 1,
-    \ 'executable' : 'latexmk',
-    \ 'hooks' : [],
-    \ 'options' : [
-    \   '-verbose',
-    \   '-file-line-error',
-    \   '-synctex=1',
-    \   '-interaction=nonstopmode',
-    \   '--shell-escape'
-    \ ],
-    \}
-
-let g:vimtex_log_ignore = [
-    \ 'Underfull',
-    \ 'Overfull',
-    \ 'specifier changed to',
-    \ 'Token not allowed in a PDF string',
-    \ ]
+let g:vimtex_view_forward_search_on_start = 0
