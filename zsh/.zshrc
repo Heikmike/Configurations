@@ -21,6 +21,7 @@ export JAVA_HOME="/usr/lib/jvm/default"
 export XDG_SCREENSHOTS_DIR="$HOME/Pictures/Screenshots"
 export PATH=~/.local/share/coursier/bin:$PATH
 export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:/home/heikmike/.local/bin
 export MOZ_ENABLE_WAYLAND=1
 export CHROME_EXECUTABLE=google-chrome-stable
 
@@ -124,6 +125,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias ls="eza --icons --sort=name -l --no-user -h --no-permissions"
+alias la="eza --icons --sort=name -l -h -a"
 alias zathura="zathura --fork"
 alias doc="cd ~/Documents"
 alias dow="cd ~/Downloads"
