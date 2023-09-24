@@ -15,7 +15,7 @@ let g:vimtex_compiler_latexmk_engines = {
     \}
 
 let g:vimtex_compiler_latexmk = {
-    \ 'build_dir' : 'out',
+    \ 'out_dir' : 'out',
     \ 'callback' : 1,
     \ 'continuous' : 1,
     \ 'executable' : 'latexmk',
