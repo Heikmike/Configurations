@@ -1,4 +1,7 @@
 return {
+  { 'scalameta/nvim-metals',
+    config = function() require("heikmike.plugins.configurations.metals") end,
+  },
   { 'junegunn/seoul256.vim' },
   { 'junegunn/goyo.vim',
     config = function() vim.api.nvim_command("source $HOME/.config/nvim/lua/heikmike/plugins/configurations/goyo.vim") end,
