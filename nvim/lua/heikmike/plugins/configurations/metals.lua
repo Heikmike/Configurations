@@ -1,4 +1,5 @@
 local api = vim.api
+local telescope = require("telescope.builtin")
 
 ----------------------------------
 -- OPTIONS -----------------------
@@ -45,6 +46,25 @@ dap.configurations.scala = {
 
 metals_config.on_attach = function(client, bufnr)
   require("metals").setup_dap()
+
+  local opts = { buffer = bufnr }
+  local bind = vim.keymap.set
+
+  bind('n', '<leader>rn', function() vim.lsp.buf.rename() end, opts)
+  bind('n', 'K', function() vim.lsp.buf.hover() end, opts)
+  bind('n', '<C-k>', function() vim.lsp.buf.signature_help() end, opts)
+  bind('n', '<leader>sa', function() vim.lsp.buf.code_action() end, opts)
+  bind('n', 'gd', function() telescope.lsp_definitions() end, opts)
+  bind('n', 'gt', function() telescope.lsp_type_definitions() end, opts)
+  bind('n', 'gi', function() telescope.lsp_implementations() end, opts)
+  bind('n', 'gr', function() telescope.lsp_references() end, opts)
+  bind('n', 'go', function() telescope.lsp_document_symbols() end, opts)
+  bind('n', 'gO', function() telescope.lsb_document_symbols() end, opts)
+  bind('n', '<leader>sd', function() vim.diagnostic.open_float() end, opts)
+  bind('n', '<leader>sk', function() vim.lsp.diagnostic.goto_prev() end, opts)
+  bind('n', '<leader>sj', function() vim.lsp.diagnostic.goto_next() end, opts)
+  bind('n', '<leader>ss', function() telescope.diagnostics() end, opts)
+  bind("n", "<leader>f", vim.lsp.buf.format)
 end
 
 -- Autocmd that will actually be in charging of starting the whole thing
