@@ -38,13 +38,24 @@ lsp.on_attach(function(_, bufnr)
   bind('n', 'gr', function() telescope.lsp_references() end, opts)
   bind('n', 'go', function() telescope.lsp_document_symbols() end, opts)
   bind('n', 'gO', function() telescope.lsb_document_symbols() end, opts)
-  bind('n', '<leader>sd', function() vim.diagnostic.open_float() end, opts)
+  bind('n', '<leader>sd', function() vim.diagnostic.open_float({ focusable = true }) end, opts)
   bind('n', '<leader>sk', function() vim.lsp.diagnostic.goto_prev() end, opts)
   bind('n', '<leader>sj', function() vim.lsp.diagnostic.goto_next() end, opts)
   bind('n', '<leader>ss', function() telescope.diagnostics() end, opts)
   bind('n', '<leader>f', ':LspZeroFormat<CR>')
 end)
 
+lsp.configure("clangd", {
+  cmd = {
+    "clangd",
+    "--background-index",
+    "--clang-tidy",
+    "--header-insertion=iwyu",
+    "--cross-file-rename",
+    "--completion-style=detailed",
+    "--log=verbose",
+  }
+})
 
 lsp.nvim_workspace()
 

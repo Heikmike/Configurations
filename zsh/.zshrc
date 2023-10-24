@@ -17,6 +17,7 @@ function zvm_config() {
 export ZSH="$HOME/.oh-my-zsh"
 
 export HADOOP_CONF_DIR="/etc/hadoop"
+export BROWSER=firefox
 export JAVA_HOME="/usr/lib/jvm/default"
 export XDG_SCREENSHOTS_DIR="$HOME/Pictures/Screenshots"
 export PATH=~/.local/share/coursier/bin:$PATH
