@@ -1,6 +1,6 @@
 local telescope = require('telescope.builtin')
-local cmp = require('cmp')
-local luasnip = require('luasnip')
+-- local cmp = require('cmp')
+-- local luasnip = require('luasnip')
 local lsp = require('lsp-zero').preset({
         suggest_lsp_servers = true,
         setup_servers_on_start = true,

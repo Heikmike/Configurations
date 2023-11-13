@@ -17,18 +17,21 @@ keymap("n", "<leader>go", ":lua require('lualine').hide()<CR> | :Goyo<CR>")
 keymap("n", "<leader>y", 'Vyp')
 keymap("v", "<leader>y", '"+y')
 
+-- Move lines
+keymap("n", "<A-j>", ":m .+1<CR>==")
+keymap("n", "<A-k>", ":m .-2<CR>==")
+
+
 -- Change in surroundings
-keymap("n", "cb", "ci{")
-keymap("n", "csb", "ci[")
-keymap("n", "cg", 'ci"')
-keymap("n", "cp", "ci(")
-keymap("n", "cq", "ci'")
+keymap("n", "cib", "f{ci{")
+keymap("n", "cis", "f[ci[")
+keymap("n", "cig", 'f"ci"')
+keymap("n", "cip", "f(ci(")
+keymap("n", "ciq", "f'ci'")
 
 -- Change keys
 keymap("n", ",", "/")
 keymap("n", "U", '<C-R>')
-
--- Git
 
 -- Open configs
 keymap("n", "<leader>nc", ":e ~/.config/nvim<CR> | :cd ~/.config/nvim<CR>")
