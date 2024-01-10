@@ -3,7 +3,7 @@ hide-keyboard-layout
 disable-caps-lock-text
 indicator-caps-lock
 image=/home/heikmike/Documents/Repositories/Configurations/swaylock/images/arch.png
-scaling=center
+scaling=tile
 
 color=26292E
 
@@ -31,7 +31,7 @@ line-uses-ring
 
 indicator-radius=16
 indicator-thickness=3
-indicator-y-position=807
+indicator-y-position=748
 efect-blur=7x5
 effect-vignette=0.5:0.5
 grace=0

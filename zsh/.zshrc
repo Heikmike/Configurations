@@ -128,6 +128,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias fire="firefox"
 alias ls="eza --icons --sort=name -l --no-user -h --no-permissions"
 alias la="eza --icons --sort=name -l -h -a"
 alias zathura="zathura --fork"
