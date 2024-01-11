@@ -152,7 +152,7 @@ alias ec="cd ~/.config/eww && nvim ."
 alias sd="shutdown now"
 alias rb="reboot"
 alias cat="bat"
-
+alias rgr="ranger"
 
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
