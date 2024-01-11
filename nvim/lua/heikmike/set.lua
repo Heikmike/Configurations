@@ -16,4 +16,3 @@ vim.opt.ignorecase = true
 vim.opt.termguicolors = true
 
 vim.opt.scrolloff = 12
-
