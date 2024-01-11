@@ -1,15 +1,14 @@
 #! /bin/zsh
 
-# Get battery value using acpi
-battery=$(acpi -b | grep -P -o '[0-9]+(?=%)')
-
 while true
 do
+    # Get battery value and check if charging
+    battery=$(acpi -b | grep -P -o '[0-9]+(?=%)')
+    is_charging=$(acpi -b | grep -P -o 'Charging')
+
     # If battery is less than 20% and not charging
-    if [ $battery -lt 20 ] 
-    then
-        # Send notification
-        dunstify "Battery is low ($battery%)" -u critical -I /home/heikmike/.config/dunst/icons/battery_low.png
+    if [ $battery -lt 20 ] && [ -z "$is_charging" ] ; then
+      dunstify -u critical -I "/home/heikmike/Documents/Repositories/Configurations/dunst/icons/battery_low_white.png" -t 10000 "Battery Low" "${battery}% left"
     fi
 
     sleep 180

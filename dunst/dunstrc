@@ -68,7 +68,7 @@
     # The transparency of the window.  Range: [0; 100].
     # This option will only work if a compositing window manager is
     # present (e.g. xcompmgr, compiz, etc.). (X11 only)
-    transparency = 20
+    transparency = 60
 
     # Draw a line of "separator_height" pixel height between two
     # notifications.
@@ -83,7 +83,7 @@
     horizontal_padding = 15
 
     # Padding between text and icon.
-    text_icon_padding = 3
+    text_icon_padding = 10
 
     # Defines width in pixels of frame around the notification window.
     # Set to 0 to disable.
