@@ -1,4 +1,9 @@
 return {
+  { 'github/copilot.vim',
+    config = function()
+      vim.api.nvim_command("source $HOME/.config/nvim/lua/heikmike/plugins/configurations/copilot.vim")
+    end
+  },
   { 'scalameta/nvim-metals',
     config = function() require("heikmike.plugins.configurations.metals") end,
   },
@@ -40,10 +45,10 @@ return {
   { "mfussenegger/nvim-dap" },
   { 'tree-sitter/tree-sitter-scala' },
   { 'jiangmiao/auto-pairs' },
-  { 'projekt0n/github-nvim-theme',
+  { "xiyaowong/nvim-transparent" },
+  { "projekt0n/github-nvim-theme",
     config = function() require("heikmike.plugins.configurations.github-theme") end,
   },
-  { "xiyaowong/nvim-transparent" },
   { "nvim-lualine/lualine.nvim",
     config = function() require("heikmike.plugins.configurations.lualine") end,
   },
@@ -53,11 +58,6 @@ return {
   { 'tpope/vim-surround' },
   { 'tikhomirov/vim-glsl' },
   { 'Pocco81/auto-save.nvim' },
-  { 'github/copilot.vim',
-    config = function()
-      vim.api.nvim_command("source $HOME/.config/nvim/lua/heikmike/plugins/configurations/copilot.vim")
-    end
-  },
   { 'nvim-treesitter/nvim-treesitter',
     config = function()
       require("heikmike.plugins.configurations.treesitter")

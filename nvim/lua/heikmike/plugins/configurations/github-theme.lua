@@ -1,21 +1,11 @@
 require("github-theme").setup({
-  theme_style = "dark",
-  function_style = "italic",
-  comment_style = "italic",
-
-  -- Change the "hint" color to the "orange" color, and make the "error" color bright red
-  -- colors = {hint = "orange", error = "#ff0000"},
-  colors = {
-    -- syntax = {func = '#F997FF',}
-  },
-
-  -- Overwrite the highlight groups
-  overrides = function(c)
-    return {
-      htmlTag = {fg = c.red, bg = "#282c34", sp = c.hint, style = "underline"},
-      DiagnosticHint = {link = "LspDiagnosticsDefaultHint"},
-      -- this will remove the highlight groups
-      TSField = {},
-    }
-  end
+	options = {
+		transparent = true,
+		styles = {
+			comments = "italic",
+			function_style = "italic",
+		},
+	},
 })
+
+vim.cmd("colorscheme github_dark")
