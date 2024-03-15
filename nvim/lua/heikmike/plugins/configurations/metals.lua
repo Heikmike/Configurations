@@ -17,6 +17,7 @@ metals_config.settings = {
   showImplicitArguments = true,
   excludedPackages = { "akka.actor.typed.javadsl", "com.github.swagger.akka.javadsl" },
   showInferredType = true,
+  bloopVersion = "1.5.15"
 }
 metals_config.init_options.statusBarProvider = "on"
 metals_config.capabilities = require("cmp_nvim_lsp").default_capabilities()

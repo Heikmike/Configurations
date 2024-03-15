@@ -1,5 +1,5 @@
 require("catppuccin").setup({
-    flavour = "macchiato", -- latte, frappe, macchiato, mocha
+    flavour = "mocha", -- latte, frappe, macchiato, mocha
     background = { -- :h background
         light = "latte",
         dark = "mocha",
@@ -21,7 +21,7 @@ require("catppuccin").setup({
         functions = { "bold" },
         keywords = {},
         strings = {},
-        variables = {},
+        variables = { "italic" },
         numbers = {},
         booleans = {},
         properties = {},
@@ -41,3 +41,5 @@ require("catppuccin").setup({
         -- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
     },
 })
+
+local latte = require("catppuccin.palettes").get_palette "latte"
