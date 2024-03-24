@@ -130,6 +130,8 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias ca="bluetoothctl connect F0:D3:1F:87:3F:9E"
+alias da="bluetoothctl disconnect F0:D3:1F:87:3F:9E"
 alias opf="openoffice4"
 alias fire="firefox"
 alias ls="eza --icons --sort=name -l --no-user -h --no-permissions"

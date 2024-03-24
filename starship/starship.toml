@@ -12,8 +12,8 @@ disabled = true
 
 [time]
 disabled = false
-format = '[$time]($style)'
-style = '#ffffff'
+format = '  | [$time]($style) |'
+style = 'bold italic #ffffff'
 time_format = '%R'
 
 [os]
