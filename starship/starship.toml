@@ -1,0 +1,61 @@
+right_format = """
+  $time
+"""
+
+[directory]
+style = 'bold #ffffff'
+format = ' [$path]($style)[$read_only]($read_only_style) '
+truncation_symbol = '~/[...]/'
+
+[gcloud]
+disabled = true
+
+[time]
+disabled = false
+format = '[$time]($style)'
+style = '#ffffff'
+time_format = '%R'
+
+[os]
+disabled = false
+style = 'bold #1793d1'
+  [os.symbols]
+  Arch = "  "
+
+[character]
+success_symbol = "[](#8ff48a)"
+vimcmd_symbol = "[](#019833)"
+
+[cmd_duration]
+min_time = 5000
+format = ' - 󱎫 [$duration]($style)'
+
+[git_branch]
+symbol = " "
+style = "bold #f1502f"
+
+[git_status]
+modified = '[$count](bold yellow)'
+# deleted = "[$count](bold yellow)"
+
+# Programming Languages
+
+[c]
+format = "[$symbol]($style)"
+symbol = ' '
+style = "#283593 bold"
+
+[python]
+format = "[$symbol]($style)"
+symbol = '[](white)  '
+style = '#ffde57 bold'
+
+[scala]
+format = "[$symbol]($style)"
+symbol = '[](white) '
+style = '#de3423 bold'
+
+[rust]
+format = "[$symbol]($style)"
+symbol = '[](white) '
+style = '#ce412b bold'
