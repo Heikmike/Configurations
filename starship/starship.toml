@@ -19,8 +19,9 @@ time_format = '%R'
 [os]
 disabled = false
 style = 'bold #1793d1'
+format = ' [$symbol]($style) [󰇙](#ffffff) '
   [os.symbols]
-  Arch = "  "
+  Arch = ""
 
 [character]
 success_symbol = "[](#8ff48a)"
@@ -35,27 +36,28 @@ symbol = " "
 style = "bold #f1502f"
 
 [git_status]
-modified = '[$count](bold yellow)'
-# deleted = "[$count](bold yellow)"
+modified = ' [!](bold yellow)[$count](bold #ffffff) '
+deleted = ' (red)[$count](bold #ffffff) '
+untracked = ' [?](bold blue)[$count](bold #ffffff) '
 
 # Programming Languages
 
 [c]
 format = "[$symbol]($style)"
-symbol = ' '
+symbol = '[](#ffffff) '
 style = "#283593 bold"
 
 [python]
 format = "[$symbol]($style)"
-symbol = '[](white)  '
+symbol = '[](#ffffff)  '
 style = '#ffde57 bold'
 
 [scala]
 format = "[$symbol]($style)"
-symbol = '[](white) '
+symbol = '[](#ffffff) '
 style = '#de3423 bold'
 
 [rust]
 format = "[$symbol]($style)"
-symbol = '[](white) '
+symbol = '[](#ffffff) '
 style = '#ce412b bold'
