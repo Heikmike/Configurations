@@ -30,7 +30,6 @@ keymap("n", "cip", "f(ci(")
 keymap("n", "ciq", "f'ci'")
 
 -- Change keys
-keymap("n", ",", "/")
 keymap("n", "U", '<C-R>')
 
 -- Open configs

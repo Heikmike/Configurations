@@ -31,6 +31,7 @@ vimcmd_symbol = "[](#019833)"
 min_time = 5000
 format = ' - 󱎫 [$duration]($style)'
 
+# Git
 [git_branch]
 symbol = " "
 style = "bold #f1502f"
@@ -41,23 +42,37 @@ deleted = ' (red)[$count](bold #ffffff) '
 untracked = ' [?](bold blue)[$count](bold #ffffff) '
 
 # Programming Languages
-
 [c]
-format = "[$symbol]($style)"
-symbol = '[](#ffffff) '
+format = "[$symbol]($style) "
+symbol = ''
 style = "#283593 bold"
 
 [python]
-format = "[$symbol]($style)"
-symbol = '[](#ffffff)  '
+format = "[$symbol]($style) "
+symbol = ' '
 style = '#ffde57 bold'
 
 [scala]
-format = "[$symbol]($style)"
-symbol = '[](#ffffff) '
+format = "[$symbol]($style) "
+symbol = ''
 style = '#de3423 bold'
 
 [rust]
-format = "[$symbol]($style)"
-symbol = '[](#ffffff) '
+format = "[$symbol]($style) "
+symbol = ''
 style = '#ce412b bold'
+
+[java]
+format = "[$symbol]($style) "
+symbol = ''
+style = '#FFA518 bold'
+
+[lua]
+format = "[$symbol]($style) "
+symbol = ''
+style = '#000081 bold'
+
+[package]
+format = '\[[$symbol $version]($style)\] '
+symbol = '󰏖'
+style = 'bold #eeb38c'

@@ -18,7 +18,7 @@ export ZSH="$HOME/.oh-my-zsh"
 
 export HADOOP_CONF_DIR="/etc/hadoop"
 export BROWSER=firefox
-export JAVA_HOME="/usr/lib/jvm/default"
+export JAVA_HOME="/usr/lib/jvm/java-11-openjdk/"
 export XDG_SCREENSHOTS_DIR="$HOME/Pictures/Screenshots"
 export PATH=~/.local/share/coursier/bin:$PATH
 export PATH=$PATH:/usr/local/go/bin
@@ -30,6 +30,7 @@ export MOZ_ENABLE_WAYLAND=1
 export CHROME_EXECUTABLE=google-chrome-stable
 export MANPAGER='nvim +Man!'
 export MANWIDTH=999
+export EDITOR=nvim
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,

@@ -16,14 +16,13 @@ local metals_config = require("metals").bare_config()
 metals_config.settings = {
   showImplicitArguments = true,
   excludedPackages = { "akka.actor.typed.javadsl", "com.github.swagger.akka.javadsl" },
-  showInferredType = true,
-  bloopVersion = "1.5.15"
 }
-metals_config.init_options.statusBarProvider = "on"
+metals_config.init_options.statusBarProvider = "off"
 metals_config.capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 -- Debug settings if you're using nvim-dap
 local dap = require("dap")
+local dapui_widgets = require("dap.ui.widgets")
 
 dap.configurations.scala = {
   {
@@ -61,17 +60,25 @@ metals_config.on_attach = function(client, bufnr)
   bind('n', 'gr', function() telescope.lsp_references() end, opts)
   bind('n', 'go', function() telescope.lsp_document_symbols() end, opts)
   bind('n', 'gO', function() telescope.lsb_document_symbols() end, opts)
+  bind('n', '<leader>rn', function() vim.lsp.buf.rename() end, opts)
+  bind('n', '<leader>cl', function() vim.lsp.codelens.run() end, opts)
   bind('n', '<leader>sd', function() vim.diagnostic.open_float({ focusable = true }) end, opts)
   bind('n', '<leader>sk', function() vim.lsp.diagnostic.goto_prev() end, opts)
   bind('n', '<leader>sj', function() vim.lsp.diagnostic.goto_next() end, opts)
   bind('n', '<leader>ss', function() telescope.diagnostics() end, opts)
+  bind('n', '<leader>cc', function() dap.continue() end, opts)
+  bind('n', '<leader>db', function() dap.toggle_breakpoint() end, opts)
+  bind('n', '<leader>K', function() dapui_widgets.hover() end, opts)
+  bind('n', '<leader>nn', function() dap.step_over() end, opts)
+  bind('n', '<leader>ss', function() dap.step_into() end, opts)
+  bind('n', '<leader>dr', function() dap.dap.repl.toggle() end, opts)
   bind("n", "<leader>f", vim.lsp.buf.format)
 end
 
 -- Autocmd that will actually be in charging of starting the whole thing
 local nvim_metals_group = api.nvim_create_augroup("nvim-metals", { clear = true })
 api.nvim_create_autocmd("FileType", {
-  pattern = { "scala", "sbt" },
+  pattern = { "scala", "sbt", "java" },
   callback = function()
     require("metals").initialize_or_attach(metals_config)
   end,

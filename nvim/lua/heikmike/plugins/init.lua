@@ -39,6 +39,7 @@ return {
       require("heikmike.plugins.configurations.alpha")
     end,
   },
+  { "rcarriga/nvim-dap-ui" },
   { "mfussenegger/nvim-dap" },
   { 'tree-sitter/tree-sitter-scala' },
   { 'jiangmiao/auto-pairs' },
