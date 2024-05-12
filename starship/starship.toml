@@ -2,6 +2,9 @@ right_format = """
   $time
 """
 
+[battery]
+disabled = true
+
 [directory]
 style = 'bold #ffffff'
 format = ' [$path]($style)[$read_only]($read_only_style) '

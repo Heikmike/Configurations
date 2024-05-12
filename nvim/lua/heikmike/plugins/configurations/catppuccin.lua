@@ -16,9 +16,9 @@ require("catppuccin").setup({
     no_bold = false, -- Force no bold
     styles = {
         comments = { "italic" },
-        conditionals = {},
-        loops = {},
-        functions = { "bold" },
+        conditionals = { "italic" },
+        loops = { "italic" },
+        functions = {},
         keywords = {},
         strings = {},
         variables = { "italic" },
@@ -41,5 +41,3 @@ require("catppuccin").setup({
         -- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
     },
 })
-
-local latte = require("catppuccin.palettes").get_palette "latte"

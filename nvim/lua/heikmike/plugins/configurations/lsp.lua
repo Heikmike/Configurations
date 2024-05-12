@@ -26,6 +26,8 @@ lsp.skip_server_setup({ 'rust_analyzer' })
 lsp.on_attach(function(_, bufnr)
   local opts = { buffer = bufnr }
   local bind = vim.keymap.set
+  local dap = require('dap')
+  local widgets = require('dap.ui.widgets')
 
   bind('n', '<leader>rn', function() vim.lsp.buf.rename() end, opts)
   bind('n', 'K', function() vim.lsp.buf.hover() end, opts)
@@ -43,6 +45,15 @@ lsp.on_attach(function(_, bufnr)
   bind('n', '<leader>sj', function() vim.lsp.diagnostic.goto_next() end, opts)
   bind('n', '<leader>ss', function() telescope.diagnostics() end, opts)
   bind('n', '<leader>f', ':LspZeroFormat<CR>')
+
+  bind('n', '<leader>dc', function() dap.continue() end, opts)
+  bind('n', '<leader>db', function() dap.toggle_breakpoint() end, opts)
+  bind('n', '<leader>K', function() widgets.hover() end, opts)
+  bind('n', '<leader>sc', function() widgets.cursor_float(widgets.scopes) end, opts)
+  bind('n', '<leader>dn', function() dap.step_over() end, opts)
+  bind('n', '<leader>ds', function() dap.step_into() end, opts)
+  bind('n', '<leader>dr', function() dap.repl.toggle() end, opts)
+  bind('n', '<leader>dt', function() dap.terminate() end, opts)
 end)
 
 lsp.configure("clangd", {

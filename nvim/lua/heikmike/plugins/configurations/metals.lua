@@ -21,28 +21,8 @@ metals_config.init_options.statusBarProvider = "off"
 metals_config.capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 -- Debug settings if you're using nvim-dap
+local widgets = require("dap.ui.widgets")
 local dap = require("dap")
-local dapui_widgets = require("dap.ui.widgets")
-
-dap.configurations.scala = {
-  {
-    type = "scala",
-    request = "launch",
-    name = "RunOrTest",
-    metals = {
-      runType = "runOrTestFile",
-      --args = { "firstArg", "secondArg", "thirdArg" }, -- here just as an example
-    },
-  },
-  {
-    type = "scala",
-    request = "launch",
-    name = "Test Target",
-    metals = {
-      runType = "testTarget",
-    },
-  },
-}
 
 metals_config.on_attach = function(client, bufnr)
   require("metals").setup_dap()
@@ -66,12 +46,14 @@ metals_config.on_attach = function(client, bufnr)
   bind('n', '<leader>sk', function() vim.lsp.diagnostic.goto_prev() end, opts)
   bind('n', '<leader>sj', function() vim.lsp.diagnostic.goto_next() end, opts)
   bind('n', '<leader>ss', function() telescope.diagnostics() end, opts)
-  bind('n', '<leader>cc', function() dap.continue() end, opts)
+  bind('n', '<leader>dc', function() dap.continue() end, opts)
   bind('n', '<leader>db', function() dap.toggle_breakpoint() end, opts)
-  bind('n', '<leader>K', function() dapui_widgets.hover() end, opts)
-  bind('n', '<leader>nn', function() dap.step_over() end, opts)
-  bind('n', '<leader>ss', function() dap.step_into() end, opts)
-  bind('n', '<leader>dr', function() dap.dap.repl.toggle() end, opts)
+  bind('n', '<leader>K', function() widgets.hover() end, opts)
+  bind('n', '<leader>sc', function() widgets.cursor_float(widgets.scopes) end, opts)
+  bind('n', '<leader>dn', function() dap.step_over() end, opts)
+  bind('n', '<leader>ds', function() dap.step_into() end, opts)
+  bind('n', '<leader>dr', function() dap.repl.toggle() end, opts)
+  bind('n', '<leader>dt', function() dap.terminate() end, opts)
   bind("n", "<leader>f", vim.lsp.buf.format)
 end
 

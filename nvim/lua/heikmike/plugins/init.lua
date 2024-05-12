@@ -1,4 +1,9 @@
 return {
+  { 'mxsdev/nvim-dap-vscode-js',
+    config = function()
+      require("heikmike.plugins.configurations.dap-vscode-js")
+    end,
+  },
   { 'github/copilot.vim',
     config = function()
       vim.api.nvim_command("source $HOME/.config/nvim/lua/heikmike/plugins/configurations/copilot.vim")
@@ -40,7 +45,11 @@ return {
     end,
   },
   { "rcarriga/nvim-dap-ui" },
-  { "mfussenegger/nvim-dap" },
+  { "mfussenegger/nvim-dap",
+    config = function()
+      require("heikmike.plugins.configurations.dap")
+    end,
+  },
   { 'tree-sitter/tree-sitter-scala' },
   { 'jiangmiao/auto-pairs' },
   { "xiyaowong/nvim-transparent" },
