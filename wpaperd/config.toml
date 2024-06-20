@@ -1,4 +1,5 @@
 [default]
-path = "~/Downloads/graasp.png"
-mode = "tile"
+path = "~/Documents/Repositories/Wallpapers"
+duration = "10m"
+mode = "stretch"
 

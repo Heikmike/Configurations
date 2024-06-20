@@ -1,8 +1,0 @@
-#!/bin/bash
-
-eww daemon
-eww open --toggle welcome
-sleep 2.0
-eww open --toggle welcome
-sleep 0.5
-/home/heikmike/.config/eww/dashboard/launch_dashboard
