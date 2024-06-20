@@ -1,4 +1,5 @@
 return {
+  { 'jalvesaq/Nvim-R' },
   { 'mxsdev/nvim-dap-vscode-js',
     config = function()
       require("heikmike.plugins.configurations.dap-vscode-js")

@@ -24,6 +24,7 @@ export PATH=~/.local/share/coursier/bin:$PATH
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:/home/heikmike/.local/bin
 export PATH=$PATH:/usr/local/texlive/2023/bin/x86_64-linux
+export PATH=$PATH:/home/heikmike/.dotnet
 export MANPATH=$MANPATH:/usr/local/texlive/2023/texmf-dist/doc/man
 export INFOPATH=$INFOPATH:/usr/local/texlive/2023/texmf-dist/doc/info
 export MOZ_ENABLE_WAYLAND=1
@@ -31,6 +32,8 @@ export CHROME_EXECUTABLE=google-chrome-stable
 export MANPAGER='nvim +Man!'
 export MANWIDTH=999
 export EDITOR=nvim
+export QT_QPA_PLATFORM=wayland
+export DOTNET_ROOT=/home/heikmike/.dotnet
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
