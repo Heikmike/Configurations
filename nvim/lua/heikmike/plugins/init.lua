@@ -72,11 +72,6 @@ return {
     end,
   },
   { 'nvim-lua/plenary.nvim' },
-  { 'ThePrimeagen/harpoon',
-    config = function()
-      require("heikmike.plugins.configurations.harpoon")
-    end,
-  },
   { 'iamcco/markdown-preview.nvim',
     config = function()
       vim.api.nvim_command(
