@@ -1,4 +1,5 @@
 return {
+  { 'gpanders/nvim-parinfer' },
   { 'jalvesaq/Nvim-R' },
   { 'mxsdev/nvim-dap-vscode-js',
     config = function()
