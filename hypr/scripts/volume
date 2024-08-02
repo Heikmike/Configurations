@@ -9,8 +9,6 @@ for pid in $(pidof -x $script_name); do
     fi 
 done
 
-eww open volume-popup
-
 if [ "$1" = "up" ]; then
     amixer -D pulse sset Master 5%+
 elif [ "$1" = "down" ]; then
