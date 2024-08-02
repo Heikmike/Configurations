@@ -10,7 +10,7 @@ for pid in $(pidof -x $script_name); do
 done
 
 if [ "$1" = "up" ]; then
-    light -A 5
+  brightnessctl set +10%
 elif [ "$1" = "down" ]; then
-    light -U 5
+  brightnessctl set 10%-
 fi

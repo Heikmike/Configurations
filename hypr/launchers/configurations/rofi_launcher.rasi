@@ -17,7 +17,7 @@ configuration {
 }
 
 window {
-    font: "Roboto 11";
+    font: "CaskaydiaCove Nerd Font 24";
     location: west;
     anchor: west;
     x-offset: 10px;
@@ -34,7 +34,7 @@ inputbar {
     background-color: @background-alt;
     text-color: @foreground;
     border-radius: @radius;
-    padding: 1%;
+    padding: 2%;
 
     children: [entry, prompt];
 }
@@ -45,7 +45,7 @@ prompt {
 
 entry {
     placeholder-color: @grey;
-    placeholder: "Search configurations";
+    placeholder: "Search for an application";
 
     background-color: inherit;
     color: inherit;
@@ -106,7 +106,7 @@ element selected.active {
 
 element-icon {
     background-color: inherit;
-    size: 2%;
+    size: 5%;
     vertical-align: 0.5;
 }
 
