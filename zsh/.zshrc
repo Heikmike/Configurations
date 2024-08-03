@@ -32,7 +32,7 @@ export CHROME_EXECUTABLE=google-chrome-stable
 export MANPAGER='nvim +Man!'
 export MANWIDTH=999
 export EDITOR=nvim
-export QT_QPA_PLATFORM=wayland
+export QT_QPA_PLATFORM=offscreen
 export DOTNET_ROOT=/home/heikmike/.dotnet
 
 # Set name of the theme to load --- if set to "random", it will
