@@ -1,4 +1,14 @@
 return {
+  { 'leoluz/nvim-dap-go',
+    config = function()
+      require("heikmike.plugins.configurations.dap-go")
+    end,
+  },
+  { 'mfussenegger/nvim-lint',
+    config = function()
+      require("heikmike.plugins.configurations.lint")
+    end,
+  },
   { 'gpanders/nvim-parinfer' },
   { 'jalvesaq/Nvim-R' },
   { 'mxsdev/nvim-dap-vscode-js',

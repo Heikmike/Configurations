@@ -2,24 +2,24 @@ local telescope = require('telescope.builtin')
 -- local cmp = require('cmp')
 -- local luasnip = require('luasnip')
 local lsp = require('lsp-zero').preset({
-        suggest_lsp_servers = true,
-        setup_servers_on_start = true,
-        set_lsp_keymaps = false,
-        configure_diagnostics = true,
-        cmp_capabilities = true,
-        manage_nvim_cmp = false,
-        call_servers = 'local',
-        sign_icons = {
-            error = '✘',
-            warn = '▲',
-            hint = '⚑',
-            info = ''
-        }
-    })
+  suggest_lsp_servers = true,
+  setup_servers_on_start = true,
+  set_lsp_keymaps = false,
+  configure_diagnostics = true,
+  cmp_capabilities = true,
+  manage_nvim_cmp = false,
+  call_servers = 'local',
+  sign_icons = {
+    error = '✘',
+    warn = '▲',
+    hint = '⚑',
+    info = ''
+  }
+})
 
 lsp.ensure_installed({
-    'lua_ls',
-    'rust_analyzer',
+  'lua_ls',
+  'rust_analyzer',
 })
 lsp.skip_server_setup({ 'rust_analyzer' })
 
@@ -68,54 +68,62 @@ lsp.configure("clangd", {
   }
 })
 
+-- Disable diagnostics for gopls
+lsp.configure("gopls", {
+  cmd = { "gopls", "-remote=auto" },
+  handlers = {
+    ["textDocument/publishDiagnostics"] = function() end
+  }
+})
+
 lsp.nvim_workspace()
 
 lsp.setup()
 
 vim.diagnostic.config({
-    virtual_text = true,
-    signs = true,
-    update_in_insert = false,
-    underline = true,
-    severity_sort = true,
-    float = {
-        focusable = false,
-        style = 'minimal',
-        border = 'rounded',
-        source = 'always',
-        header = {
-            "",
-            "LspDiagnosticsDefaultWarning",
-        },
-        prefix = function(diagnostic)
-          local diag_to_format = {
-              [vim.diagnostic.severity.ERROR] = { "Error", "LspDiagnosticsDefaultError" },
-              [vim.diagnostic.severity.WARN] = { "Warning", "LspDiagnosticsDefaultWarning" },
-              [vim.diagnostic.severity.INFO] = { "Info", "LspDiagnosticsDefaultInfo" },
-              [vim.diagnostic.severity.HINT] = { "Hint", "LspDiagnosticsDefaultHint" },
-          }
-          local res = diag_to_format[diagnostic.severity]
-          return string.format("(%s) ", res[1]), res[2]
-        end,
+  virtual_text = true,
+  signs = true,
+  update_in_insert = false,
+  underline = true,
+  severity_sort = true,
+  float = {
+    focusable = false,
+    style = 'minimal',
+    border = 'rounded',
+    source = true,
+    header = {
+      "",
+      "LspDiagnosticsDefaultWarning",
     },
+    prefix = function(diagnostic)
+      local diag_to_format = {
+        [vim.diagnostic.severity.ERROR] = { "Error", "LspDiagnosticsDefaultError" },
+        [vim.diagnostic.severity.WARN] = { "Warning", "LspDiagnosticsDefaultWarning" },
+        [vim.diagnostic.severity.INFO] = { "Info", "LspDiagnosticsDefaultInfo" },
+        [vim.diagnostic.severity.HINT] = { "Hint", "LspDiagnosticsDefaultHint" },
+      }
+      local res = diag_to_format[diagnostic.severity]
+      return string.format("(%s) ", res[1]), res[2]
+    end,
+  },
 })
 
 -- initialize rust_analyzer with rust-tools
 local rust_lsp = lsp.build_options('rust_analyzer', {
-        single_file_support = false,
-        on_attach = function(client, bufnr)
-        end
-    })
+  single_file_support = false,
+  on_attach = function(_, _)
+  end
+})
 require('rust-tools').setup({ server = rust_lsp })
 
 local dart_lsp = lsp.build_options('dartls', {
-        single_file_support = false,
-        on_attach = function(client, bufnr)
-        lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(
-            vim.lsp.diagnostic.on_publish_diagnostics, {
-                virtual_text = false,
-            }
-        )
-        end
-    })
+  single_file_support = false,
+  on_attach = function(_, _)
+    lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(
+      vim.lsp.diagnostic.on_publish_diagnostics, {
+        virtual_text = false,
+      }
+    )
+  end
+})
 require("flutter-tools").setup({ lsp = dart_lsp })

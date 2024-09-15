@@ -16,7 +16,7 @@ require'nvim-treesitter.configs'.setup {
   -- parser_install_dir = "/some/path/to/store/parsers", -- Remember to run vim.opt.runtimepath:append("/some/path/to/store/parsers")!
 
   highlight = {
-    enable = false,
+    enable = true,
 
     disable = function(lang, buf)
         local max_filesize = 100 * 1024 -- 100 KB
