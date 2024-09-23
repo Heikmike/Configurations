@@ -17,10 +17,24 @@ lint.linters.go_linter = {
       end
 
       local fullMessage = table.concat(parts, " ", 4)
+      local myCol
+      local myLine
+      if tonumber(parts[3]) ~= nil then
+        myCol = tonumber(parts[3])
+      else
+        myCol = 0
+      end
+
+      if tonumber(parts[2]) ~= nil then
+        myLine = tonumber(parts[2] - 1)
+      else
+        myLine = 0
+      end
+
       table.insert(items, {
         filename = parts[1],
-        lnum = tonumber(parts[2] - 1),
-        col = tonumber(parts[3]),
+        lnum = myLine,
+        col = myCol,
         message = fullMessage,
         severity = vim.lsp.protocol.DiagnosticSeverity.Error,
       })
