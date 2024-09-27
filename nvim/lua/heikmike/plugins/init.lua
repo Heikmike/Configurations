@@ -1,4 +1,10 @@
 return {
+  { 'ThePrimeagen/harpoon',
+    dependencies = { "nvim-lua/plenary.nvim" },
+    config = function()
+      require("heikmike.plugins.configurations.harpoon")
+    end,
+  },
   { 'leoluz/nvim-dap-go',
     config = function()
       require("heikmike.plugins.configurations.dap-go")

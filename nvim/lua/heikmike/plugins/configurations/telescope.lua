@@ -1,7 +1,9 @@
 local keymap = vim.keymap.set
 local opts = {noremap = true, silent = true}
 local actions = require('telescope.actions')
-require("telescope").load_extension("flutter")
+local telescope = require("telescope")
+
+telescope.load_extension("flutter")
 
 require('telescope').setup {
     defaults = {
