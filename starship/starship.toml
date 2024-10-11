@@ -8,7 +8,7 @@ disabled = true
 [directory]
 style = 'bold #ffffff'
 format = ' [$path]($style)[$read_only]($read_only_style) '
-truncation_symbol = '~/[...]/'
+truncation_symbol = '~/.../'
 
 [gcloud]
 disabled = true
@@ -16,7 +16,7 @@ disabled = true
 [time]
 disabled = false
 format = '[$time]($style)'
-style = 'bold italic #ffffff'
+style = 'bold italic'
 time_format = '%R'
 
 [os]
@@ -37,43 +37,56 @@ format = ' - 󱎫 [$duration]($style)'
 # Git
 [git_branch]
 symbol = " "
-style = "bold #f1502f"
+style = "#f1502f"
 
 [git_status]
-modified = ' [!](bold yellow)[$count](bold #ffffff) '
-deleted = ' (red)[$count](bold #ffffff) '
-untracked = ' [?](bold blue)[$count](bold #ffffff) '
+modified = '$count! '
+deleted = '$count(red) '
+untracked = '$count? '
+staged = '$count+ '
+style = 'bold #ffffff'
+format = '([$all_status $ahead_behind]($style))'
 
 # Programming Languages
 [c]
 format = "[$symbol]($style) "
-symbol = ''
-style = "#283593 bold"
+symbol = ' C '
+style = "#ffffff"
 
 [python]
 format = "[$symbol]($style) "
-symbol = ' '
-style = '#ffde57 bold'
+symbol = ' Python 󰌠'
+style = '#ffffff'
 
 [scala]
 format = "[$symbol]($style) "
-symbol = ''
-style = '#de3423 bold'
+symbol = ' Scala '
+style = '#ffffff'
 
 [rust]
 format = "[$symbol]($style) "
-symbol = ''
-style = '#ce412b bold'
+symbol = ' Rust '
+style = '#ffffff'
 
 [java]
 format = "[$symbol]($style) "
-symbol = ''
-style = '#FFA518 bold'
+symbol = ' Java '
+style = '#ffffff'
 
 [lua]
 format = "[$symbol]($style) "
-symbol = ''
-style = '#000081 bold'
+symbol = ' Lua '
+style = '#ffffff'
+
+[golang]
+format = "[$symbol]($style) "
+symbol = ' Golang '
+style = '#ffffff'
+
+[dotnet]
+format = "[$symbol]($style) "
+symbol = ' .NET'
+style = '#ffffff'
 
 [package]
 format = '\[[$symbol $version]($style)\] '
