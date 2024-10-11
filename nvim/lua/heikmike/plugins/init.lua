@@ -1,4 +1,9 @@
 return {
+  { 'simrat39/symbols-outline.nvim',
+    config = function()
+      require("heikmike.plugins.configurations.symbols-outline")
+    end,
+  },
   { 'ThePrimeagen/harpoon',
     dependencies = { "nvim-lua/plenary.nvim" },
     config = function()
