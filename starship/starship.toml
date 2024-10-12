@@ -31,8 +31,7 @@ success_symbol = "[](#8ff48a)"
 vimcmd_symbol = "[](#019833)"
 
 [cmd_duration]
-min_time = 5000
-format = ' - 󱎫 [$duration]($style)'
+disabled = true
 
 # Git
 [git_branch]
@@ -40,38 +39,38 @@ symbol = " "
 style = "#f1502f"
 
 [git_status]
-modified = '$count! '
-deleted = '$count(red) '
-untracked = '$count? '
-staged = '$count+ '
+modified = '$count[!](#f7903b) '
+deleted = '$count[](red) '
+untracked = '$count[?](yellow) '
+staged = '$count[+](green) '
 style = 'bold #ffffff'
 format = '([$all_status $ahead_behind]($style))'
 
 # Programming Languages
 [c]
 format = "[$symbol]($style) "
-symbol = ' C '
+symbol = ' '
 style = "#ffffff"
 
 [python]
 format = "[$symbol]($style) "
 symbol = ' Python 󰌠'
-style = '#ffffff'
+style = '#ffde57'
 
 [scala]
 format = "[$symbol]($style) "
 symbol = ' Scala '
-style = '#ffffff'
+style = '#de3423'
 
 [rust]
 format = "[$symbol]($style) "
 symbol = ' Rust '
-style = '#ffffff'
+style = '#B7410E'
 
 [java]
 format = "[$symbol]($style) "
 symbol = ' Java '
-style = '#ffffff'
+style = '#f14c4d'
 
 [lua]
 format = "[$symbol]($style) "
@@ -81,12 +80,17 @@ style = '#ffffff'
 [golang]
 format = "[$symbol]($style) "
 symbol = ' Golang '
-style = '#ffffff'
+style = '#29beb0'
 
 [dotnet]
 format = "[$symbol]($style) "
 symbol = ' .NET'
-style = '#ffffff'
+style = '#6c7cdc'
+
+[nodejs]
+format = "[$symbol]($style) "
+symbol = ' Node.js '
+style = '#6cc24a'
 
 [package]
 format = '\[[$symbol $version]($style)\] '

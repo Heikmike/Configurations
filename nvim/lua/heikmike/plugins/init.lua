@@ -1,4 +1,5 @@
 return {
+  { 'RRethy/base16-nvim' },
   { 'simrat39/symbols-outline.nvim',
     config = function()
       require("heikmike.plugins.configurations.symbols-outline")
