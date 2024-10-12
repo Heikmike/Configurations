@@ -46,12 +46,16 @@ require("lualine").setup({
         "fileformat",
         symbols = fileFormatSymbols,
         separator = { left = "" }
+      },
+      {
+        "datetime",
+        style = "%B %d, %H:%M ",
       }
     },
     lualine_z = {
       {
         "hostname",
-        separator = { left = "" },
+        separator = { left = "", right = "" },
       },
     },
   },
