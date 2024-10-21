@@ -1,28 +1,18 @@
-right_format = """
-  $time
-"""
-
 [battery]
 disabled = true
 
 [directory]
-style = 'bold #ffffff'
+style = '#ffffff'
 format = ' [$path]($style)[$read_only]($read_only_style) '
 truncation_symbol = '~/.../'
 
 [gcloud]
 disabled = true
 
-[time]
-disabled = false
-format = '[$time]($style)'
-style = 'bold italic'
-time_format = '%R'
-
 [os]
 disabled = false
 style = 'bold #1793d1'
-format = ' [$symbol]($style) [󰇙](#ffffff) '
+format = ' [$symbol]($style) '
   [os.symbols]
   Arch = ""
 

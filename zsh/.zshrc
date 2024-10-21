@@ -136,6 +136,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias za="zathura"
 alias sc="cd ~/.config/starship && nvim starship.toml"
 alias ca="bluetoothctl connect F0:D3:1F:87:3F:9E"
 alias da="bluetoothctl disconnect F0:D3:1F:87:3F:9E"

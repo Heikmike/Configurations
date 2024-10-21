@@ -1,6 +1,4 @@
 local telescope = require('telescope.builtin')
--- local cmp = require('cmp')
--- local luasnip = require('luasnip')
 local lsp = require('lsp-zero').preset({
   suggest_lsp_servers = true,
   setup_servers_on_start = true,
@@ -52,8 +50,17 @@ lsp.on_attach(function(_, bufnr)
   bind('n', '<leader>sc', function() widgets.cursor_float(widgets.scopes) end, opts)
   bind('n', '<leader>dn', function() dap.step_over() end, opts)
   bind('n', '<leader>ds', function() dap.step_into() end, opts)
-  bind('n', '<leader>dr', function() dap.repl.toggle() end, opts)
+  bind('n', '<leader>dr', function()
+    dap.repl.toggle({ width = 20 }, 'vertical split')
+    vim.cmd("wincmd h")
+    vim.cmd("wincmd L")
+    vim.cmd("wincmd h")
+    vim.cmd("65 wincmd <")
+  end, opts)
   bind('n', '<leader>dt', function() dap.terminate() end, opts)
+  bind('n', '<leader>dl', function() dap.run_last() end, opts)
+  bind('n', '<leader>dl', function() dap.run_last() end, opts)
+  bind('n', '<leader>cb', function() dap.clear_breakpoints() end, opts)
 end)
 
 lsp.configure("clangd", {
@@ -69,12 +76,12 @@ lsp.configure("clangd", {
 })
 
 -- Disable diagnostics for gopls
-lsp.configure("gopls", {
-  cmd = { "gopls", "-remote=auto" },
-  handlers = {
-    ["textDocument/publishDiagnostics"] = function() end
-  }
-})
+-- lsp.configure("gopls", {
+--   cmd = { "gopls", "-remote=auto" },
+--   handlers = {
+--     ["textDocument/publishDiagnostics"] = function() end
+--   }
+-- })
 
 lsp.nvim_workspace()
 
@@ -108,7 +115,11 @@ vim.diagnostic.config({
   },
 })
 
--- initialize rust_analyzer with rust-tools
+vim.fn.sign_define('DiagnosticSignError', { text = '', texthl = 'DiagnosticSignError' })
+vim.fn.sign_define('DiagnosticSignWarn', { text = '', texthl = 'DiagnosticSignWarn' })
+vim.fn.sign_define('DiagnosticSignInfo', { text = '', texthl = 'DiagnosticSignInfo' })
+vim.fn.sign_define('DiagnosticSignHint', { text = '', texthl = 'DiagnosticSignHint' })
+
 local rust_lsp = lsp.build_options('rust_analyzer', {
   single_file_support = false,
   on_attach = function(_, _)

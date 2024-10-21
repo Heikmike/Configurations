@@ -20,7 +20,7 @@ local function getGreeting(name)
 		[2] = "  Good morning",
 		[3] = "  Good afternoon",
 		[4] = "  Good evening",
-		[5] = "望 Good night",
+		[5] = " Good night",
 	}
 	local greetingIndex = 0
 	if hour == 23 or hour < 7 then
