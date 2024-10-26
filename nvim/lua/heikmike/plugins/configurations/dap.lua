@@ -14,6 +14,12 @@ dap.configurations.scala = {
   },
 }
 
+local pythonVenv = function()
+  local venv = os.getenv('VIRTUAL_ENV')
+  if venv then
+    return venv .. '/bin/python'
+  end
+end
 -- Python
 dap.configurations.python = {
   {
@@ -21,9 +27,7 @@ dap.configurations.python = {
     request = "launch",
     name = "Launch file",
     program = "${file}",
-    pythonPath = function()
-      return "/usr/bin/python3"
-    end,
+    pythonPath = pythonVenv(),
   },
 }
 

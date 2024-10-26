@@ -1,75 +1,109 @@
 return {
+  {
+    'cameron-wags/rainbow_csv.nvim',
+    config = true,
+    ft = {
+      'csv',
+      'tsv',
+      'csv_semicolon',
+      'csv_whitespace',
+      'csv_pipe',
+      'rfc_csv',
+      'rfc_semicolon'
+    },
+    cmd = {
+      'RainbowDelim',
+      'RainbowDelimSimple',
+      'RainbowDelimQuoted',
+      'RainbowMultiDelim'
+    }
+  },
   { 'RRethy/base16-nvim' },
-  { 'simrat39/symbols-outline.nvim',
+  {
+    'simrat39/symbols-outline.nvim',
     config = function()
       require("heikmike.plugins.configurations.symbols-outline")
     end,
   },
-  { 'ThePrimeagen/harpoon',
+  {
+    'ThePrimeagen/harpoon',
     dependencies = { "nvim-lua/plenary.nvim" },
     config = function()
       require("heikmike.plugins.configurations.harpoon")
     end,
   },
-  { 'leoluz/nvim-dap-go',
+  {
+    'leoluz/nvim-dap-go',
     config = function()
       require("heikmike.plugins.configurations.dap-go")
     end,
   },
-  { 'mfussenegger/nvim-lint',
+  {
+    'mfussenegger/nvim-lint',
     config = function()
       require("heikmike.plugins.configurations.lint")
     end,
   },
   { 'gpanders/nvim-parinfer' },
   { 'jalvesaq/Nvim-R' },
-  { 'mxsdev/nvim-dap-vscode-js',
+  {
+    'mxsdev/nvim-dap-vscode-js',
     config = function()
       require("heikmike.plugins.configurations.dap-vscode-js")
     end,
   },
-  { 'github/copilot.vim',
+  {
+    'github/copilot.vim',
     config = function()
       vim.api.nvim_command("source $HOME/.config/nvim/lua/heikmike/plugins/configurations/copilot.vim")
     end
   },
-  { 'scalameta/nvim-metals',
+  {
+    'scalameta/nvim-metals',
     config = function() require("heikmike.plugins.configurations.metals") end,
   },
   { 'junegunn/seoul256.vim' },
   { 'folke/lsp-colors.nvim' },
   { "MunifTanjim/nui.nvim" },
-  { "nvim-neo-tree/neo-tree.nvim",
+  {
+    "nvim-neo-tree/neo-tree.nvim",
     config = function()
       require("heikmike.plugins.configurations.neotree")
     end
   },
   { 'preservim/vim-pencil' },
-  { 'sindrets/diffview.nvim',
+  {
+    'sindrets/diffview.nvim',
     config = function() require("heikmike.plugins.configurations.diffview") end,
   },
-  { 'akinsho/flutter-tools.nvim',
+  {
+    'akinsho/flutter-tools.nvim',
     config = function() require("heikmike.plugins.configurations.flutter") end,
   },
-  { 'junegunn/vim-easy-align',
+  {
+    'junegunn/vim-easy-align',
     config = function() require("heikmike.plugins.configurations.align") end,
   },
   { 'nvim-tree/nvim-web-devicons' },
-  { 'vimwiki/vimwiki',
+  {
+    'vimwiki/vimwiki',
     config = function()
       vim.api.nvim_command("source $HOME/.config/nvim/lua/heikmike/plugins/configurations/vimwiki.vim")
     end
   },
-  { 'catppuccin/nvim',
+  {
+    'catppuccin/nvim',
     config = function() require("heikmike.plugins.configurations.catppuccin") end,
   },
-  { "goolord/alpha-nvim",
+  {
+    "goolord/alpha-nvim",
     config = function()
       require("heikmike.plugins.configurations.alpha")
     end,
   },
   { "rcarriga/nvim-dap-ui" },
-  { "mfussenegger/nvim-dap",
+  {
+    "mfussenegger/nvim-dap",
     config = function()
       require("heikmike.plugins.configurations.dap")
     end,
@@ -77,32 +111,38 @@ return {
   { 'tree-sitter/tree-sitter-scala' },
   { 'jiangmiao/auto-pairs' },
   { "xiyaowong/nvim-transparent" },
-  { "projekt0n/github-nvim-theme",
+  {
+    "projekt0n/github-nvim-theme",
     config = function() require("heikmike.plugins.configurations.github-theme") end,
   },
-  { "nvim-lualine/lualine.nvim",
+  {
+    "nvim-lualine/lualine.nvim",
     config = function() require("heikmike.plugins.configurations.lualine") end,
   },
-  { 'tpope/vim-fugitive',
+  {
+    'tpope/vim-fugitive',
     config = function() require("heikmike.plugins.configurations.fugitive") end,
   },
   { 'tpope/vim-surround' },
   { 'tikhomirov/vim-glsl' },
   { 'Pocco81/auto-save.nvim' },
-  { 'nvim-treesitter/nvim-treesitter',
+  {
+    'nvim-treesitter/nvim-treesitter',
     config = function()
       require("heikmike.plugins.configurations.treesitter")
     end,
   },
   { 'nvim-lua/plenary.nvim' },
-  { 'iamcco/markdown-preview.nvim',
+  {
+    'iamcco/markdown-preview.nvim',
     config = function()
       vim.api.nvim_command(
         "source $HOME/.config/nvim/lua/heikmike/plugins/configurations/markdown-preview.vim")
     end,
   },
   { 'elkowar/yuck.vim' },
-  { 'lervag/vimtex',
+  {
+    'lervag/vimtex',
     config = function()
       vim.api.nvim_command("source $HOME/.config/nvim/lua/heikmike/plugins/configurations/vimtex.vim")
     end,
@@ -120,7 +160,8 @@ return {
       vim.cmd('colorscheme rose-pine')
     end,
   },
-  { 'nvim-telescope/telescope.nvim',
+  {
+    'nvim-telescope/telescope.nvim',
     config = function()
       require("heikmike.plugins.configurations.telescope")
     end,
@@ -131,27 +172,28 @@ return {
     branch = 'v1.x',
     dependencies = {
       -- LSP Support
-      { 'neovim/nvim-lspconfig' }, -- Required
-      { 'williamboman/mason.nvim' }, -- Optional
+      { 'neovim/nvim-lspconfig' },             -- Required
+      { 'williamboman/mason.nvim' },           -- Optional
       { 'williamboman/mason-lspconfig.nvim' }, -- Optional
 
       -- Autocompletion
-      { 'hrsh7th/nvim-cmp',
+      {
+        'hrsh7th/nvim-cmp',
         config = function()
           require("heikmike.plugins.configurations.cmp")
         end,
       }, -- Required
       { "hrsh7th/cmp-vsnip" },
       { "hrsh7th/vim-vsnip" },
-      { 'hrsh7th/cmp-nvim-lsp' }, -- Required
-      { 'hrsh7th/cmp-buffer' }, -- Optional
-      { 'hrsh7th/cmp-path' }, -- Optional
+      { 'hrsh7th/cmp-nvim-lsp' },     -- Required
+      { 'hrsh7th/cmp-buffer' },       -- Optional
+      { 'hrsh7th/cmp-path' },         -- Optional
       { 'saadparwaiz1/cmp_luasnip' }, -- Optional
-      { 'hrsh7th/cmp-nvim-lua' }, -- Optional
-      { 'onsails/lspkind.nvim' }, -- Optional
+      { 'hrsh7th/cmp-nvim-lua' },     -- Optional
+      { 'onsails/lspkind.nvim' },     -- Optional
 
       -- Snippets
-      { 'L3MON4D3/LuaSnip' }, -- Required
+      { 'L3MON4D3/LuaSnip' },             -- Required
       { 'rafamadriz/friendly-snippets' }, -- Optional
 
       -- Others

@@ -44,6 +44,7 @@
   "nvim-treesitter": { "branch": "master", "commit": "d13f0183ba93f9b5aba7359146f294abfffff9c3" },
   "nvim-web-devicons": { "branch": "master", "commit": "5be6c4e685618b99c3210a69375b38a1202369b4" },
   "plenary.nvim": { "branch": "master", "commit": "a3e3bc82a3f95c5ed0d7201546d5d2c19b20d683" },
+  "rainbow_csv.nvim": { "branch": "main", "commit": "7f3fddfe813641035fac2cdf94c2ff69bb0bf0b9" },
   "rasi.vim": { "branch": "main", "commit": "7ce90590d007a7d15fc292313565e04a2ba57182" },
   "rust-tools.nvim": { "branch": "master", "commit": "676187908a1ce35ffcd727c654ed68d851299d3e" },
   "seoul256.vim": { "branch": "master", "commit": "b21c9e63f7c2d543db8b34a393a0b42ec7e9b891" },
