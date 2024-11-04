@@ -12,7 +12,7 @@ config.font = wezterm.font_with_fallback {
   "Hack Nerd Font Mono",
   "Fira Code Nerd Font Mono",
 }
-config.font_size = 16.0
+config.font_size = 15.0
 
 -- Window
 config.enable_tab_bar = false
