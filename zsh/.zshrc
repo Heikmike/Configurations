@@ -36,6 +36,7 @@ export MANWIDTH=999
 export EDITOR=nvim
 export QT_QPA_PLATFORM=offscreen
 export DOTNET_ROOT=/home/heikmike/.dotnet
+export XDG_CONFIG_HOME=$HOME/.config
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
