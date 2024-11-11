@@ -1,6 +1,5 @@
 #!/bin/bash
 # This script is used to increase/decrease the brightness
-# It also show and hide the eww brightness-popup.
 
 script_name=${BASH_SOURCE[0]}
 for pid in $(pidof -x $script_name); do
