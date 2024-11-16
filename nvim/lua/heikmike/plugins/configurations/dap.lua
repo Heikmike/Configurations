@@ -1,5 +1,8 @@
 local dap = require("dap")
 
+vim.fn.sign_define("DapBreakpoint", { text = "", texthl = "", linehl = "", numhl = "" })
+vim.fn.sign_define("DapStopped", { text = "󰐊", texthl = "", linehl = "", numhl = "" })
+
 -- Scala
 -- Note that the adapater is managed bu Metals, so we don't need to specify it here
 dap.configurations.scala = {
@@ -18,8 +21,11 @@ local pythonVenv = function()
   local venv = os.getenv('VIRTUAL_ENV')
   if venv then
     return venv .. '/bin/python'
+  else
+    return '/usr/bin/python3'
   end
 end
+
 -- Python
 dap.configurations.python = {
   {

@@ -1,5 +1,26 @@
 return {
   {
+    "rcarriga/nvim-dap-ui",
+    dependencies = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" },
+    config = function()
+      require("heikmike.plugins.configurations.dapui")
+    end,
+  },
+  {
+    "folke/lazydev.nvim",
+    ft = "lua",
+  },
+  {
+    "hrsh7th/nvim-cmp",
+    opts = function(_, opts)
+      opts.sources = opts.sources or {}
+      table.insert(opts.sources, {
+        name = "lazydev",
+        group_index = 0, -- set group index to 0 to skip loading LuaLS completions
+      })
+    end,
+  },
+  {
     'cameron-wags/rainbow_csv.nvim',
     config = true,
     ft = {
@@ -101,7 +122,6 @@ return {
       require("heikmike.plugins.configurations.alpha")
     end,
   },
-  { "rcarriga/nvim-dap-ui" },
   {
     "mfussenegger/nvim-dap",
     config = function()

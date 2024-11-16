@@ -38,7 +38,7 @@ local keymaps = {
 
   close_pane = {
     mods = 'CMD',
-    key = 'p',
+    key = 'w',
     action = action.CloseCurrentPane { confirm = false },
   },
 
@@ -68,7 +68,7 @@ local keymaps = {
 
   go_next_pane = {
     mods = 'CMD',
-    key = 'i',
+    key = 'Tab',
     action = action.ActivatePaneDirection 'Next',
   },
 }
