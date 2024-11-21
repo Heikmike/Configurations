@@ -1,10 +1,3 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-# if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-#   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-# fi
-
 function zvm_config() {
   ZVM_READKEY_ENGINE=$ZVM_READKEY_ENGINE_NEX
   ZVM_ESCAPE_KEYTIMEOUT=0
@@ -102,6 +95,7 @@ ZSH_THEME=""
 function zvm_after_init() {
   [[ $- == *i* ]] && source "/usr/share/fzf/completion.zsh" 2> /dev/null
   [[ $- == *i* ]] && source "/usr/share/fzf/key-bindings.zsh" 2> /dev/null
+  [[ $- == *i* ]] && source <(fzf --zsh) 2> /dev/null
 }
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
@@ -166,10 +160,6 @@ alias rb="reboot"
 alias cat="bat"
 alias rgr="ranger"
 
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/opt/homebrew/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
@@ -202,3 +192,5 @@ export STARSHIP_CONFIG=~/.config/starship/starship.toml
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
