@@ -5,8 +5,6 @@ local config = {}
 
 config.leader = { key='d', mods='CMD', timeout_milliseconds=1000 }
 
-config.enable_wayland = false
-
 -- Keybindings
 config.keys = {
   keymaps.split_vertical,
