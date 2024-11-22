@@ -7,7 +7,7 @@ scaling=tile
 
 color=26292E
 
-inside-color=E5507300
+inside-color=1f1f1e
 inside-clear-color=E3B34100
 inside-ver-color=00DEFF00
 inside-wrong-color=E55073
@@ -29,9 +29,10 @@ separator-color=FFFFFF
 
 line-uses-ring
 
-indicator-radius=16
-indicator-thickness=3
-indicator-y-position=747
+indicator-radius=50
+indicator-thickness=4
+indicator-y-position=1250
+indicator-x-position=1815
 efect-blur=7x5
 effect-vignette=0.5:0.5
 grace=0

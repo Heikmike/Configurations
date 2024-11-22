@@ -10,9 +10,9 @@ for pid in $(pidof -x $script_name); do
 done
 
 if [ "$1" = "up" ]; then
-    amixer -D pulse sset Master 5%+
+    wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+
 elif [ "$1" = "down" ]; then
-    amixer -D pulse sset Master 5%-
+    wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%-
 elif [ "$1" = "mute" ]; then
-    amixer -D pulse set Master 1+ toggle
+    wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
 fi

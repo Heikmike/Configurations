@@ -17,7 +17,7 @@ format = ' [$symbol]($style) '
   Arch = ""
 
 [character]
-success_symbol = "[](#8ff48a)"
+success_symbol = "[](#8ff48a)"
 vimcmd_symbol = "[](#019833)"
 
 [cmd_duration]

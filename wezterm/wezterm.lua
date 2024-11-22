@@ -5,6 +5,8 @@ local config = {}
 
 config.leader = { key='d', mods='CMD', timeout_milliseconds=1000 }
 
+config.enable_wayland = false
+
 -- Keybindings
 config.keys = {
   keymaps.split_vertical,
@@ -31,7 +33,7 @@ config.font = wezterm.font_with_fallback {
   'Hack Nerd Font Mono',
   'Fira Code Nerd Font Mono',
 }
-config.font_size = 15.0
+config.font_size = 24.0
 
 -- Window
 config.enable_tab_bar = false
