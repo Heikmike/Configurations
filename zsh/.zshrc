@@ -20,6 +20,7 @@ export PATH=$PATH:/home/heikmike/.local/bin
 export PATH=$PATH:/usr/local/texlive/2023/bin/x86_64-linux
 export PATH=$PATH:/home/heikmike/.dotnet
 export PATH=$PATH:/home/heikmike/stainless
+export PATH=$PATH:/opt/pulsesecure/bin
 export MANPATH=$MANPATH:/usr/local/texlive/2023/texmf-dist/doc/man
 export INFOPATH=$INFOPATH:/usr/local/texlive/2023/texmf-dist/doc/info
 export MOZ_ENABLE_WAYLAND=1
