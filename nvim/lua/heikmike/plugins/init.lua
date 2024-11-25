@@ -1,5 +1,19 @@
 return {
-    {
+  {
+    "rachartier/tiny-inline-diagnostic.nvim",
+    event = "VeryLazy", -- Or `LspAttach`
+    priority = 1000,    -- needs to be loaded in first
+    config = function()
+      require('heikmike.plugins.configurations.tiny-inline-diagnostic')
+    end,
+  },
+  {
+    "karb94/neoscroll.nvim",
+    config = function()
+      require("heikmike.plugins.configurations.neoscroll")
+    end,
+  },
+  {
     "iamcco/markdown-preview.nvim",
     config = function()
       vim.api.nvim_command(

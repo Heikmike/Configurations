@@ -87,34 +87,6 @@ lsp.nvim_workspace()
 
 lsp.setup()
 
-vim.diagnostic.config({
-  virtual_text = true,
-  signs = true,
-  update_in_insert = false,
-  underline = true,
-  severity_sort = true,
-  float = {
-    focusable = false,
-    style = 'minimal',
-    border = 'rounded',
-    source = true,
-    header = {
-      "",
-      "LspDiagnosticsDefaultWarning",
-    },
-    prefix = function(diagnostic)
-      local diag_to_format = {
-        [vim.diagnostic.severity.ERROR] = { "Error", "LspDiagnosticsDefaultError" },
-        [vim.diagnostic.severity.WARN] = { "Warning", "LspDiagnosticsDefaultWarning" },
-        [vim.diagnostic.severity.INFO] = { "Info", "LspDiagnosticsDefaultInfo" },
-        [vim.diagnostic.severity.HINT] = { "Hint", "LspDiagnosticsDefaultHint" },
-      }
-      local res = diag_to_format[diagnostic.severity]
-      return string.format("(%s) ", res[1]), res[2]
-    end,
-  },
-})
-
 vim.fn.sign_define('DiagnosticSignError', { text = '', texthl = 'DiagnosticSignError' })
 vim.fn.sign_define('DiagnosticSignWarn', { text = '', texthl = 'DiagnosticSignWarn' })
 vim.fn.sign_define('DiagnosticSignInfo', { text = '', texthl = 'DiagnosticSignInfo' })
