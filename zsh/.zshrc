@@ -132,6 +132,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias mpdf="mupdf . &"
 alias codep="code . && exit"
 alias za="zathura"
 alias sc="cd ~/.config/starship && nvim starship.toml"

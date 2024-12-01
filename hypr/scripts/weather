@@ -1,7 +1,0 @@
-#!/bin/bash
-
-while [ true ]; do
-    /home/heikmike/.config/eww/dashboard/scripts/weather_info --getdata
-
-    sleep 300
-done
