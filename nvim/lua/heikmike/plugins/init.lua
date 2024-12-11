@@ -14,19 +14,6 @@ return {
     end,
   },
   {
-    "iamcco/markdown-preview.nvim",
-    config = function()
-      vim.api.nvim_command(
-        "source $HOME/.config/nvim/lua/heikmike/plugins/configurations/markdown-preview.vim")
-    end,
-    cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
-    build = "cd app && npm install",
-    init = function()
-      vim.g.mkdp_filetypes = { "markdown" }
-    end,
-    ft = { "markdown" },
-  },
-  {
     "rcarriga/nvim-dap-ui",
     dependencies = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" },
     config = function()
