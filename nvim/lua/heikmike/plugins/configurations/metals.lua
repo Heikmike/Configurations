@@ -66,3 +66,5 @@ api.nvim_create_autocmd("FileType", {
   end,
   group = nvim_metals_group,
 })
+
+vim.opt_global.shortmess:remove("F")

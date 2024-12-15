@@ -20,7 +20,7 @@ dap.configurations.scala = {
 local pythonVenv = function()
   local venv = os.getenv('VIRTUAL_ENV')
   if venv then
-    return venv .. '/bin/python'
+    return venv .. '/bin/python3'
   else
     return '/usr/bin/python3'
   end
@@ -39,6 +39,6 @@ dap.configurations.python = {
 
 dap.adapters.python = {
   type = "executable",
-  command = "python3",
+  command = pythonVenv(),
   args = { "-m", "debugpy.adapter" },
 }
