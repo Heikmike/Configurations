@@ -4,7 +4,7 @@ vim.fn.sign_define("DapBreakpoint", { text = "", texthl = "", linehl = "", nu
 vim.fn.sign_define("DapStopped", { text = "󰐊", texthl = "", linehl = "", numhl = "" })
 
 -- Scala
--- Note that the adapater is managed bu Metals, so we don't need to specify it here
+-- Note that the adapater is managed by Metals, so we don't need to specify it here
 dap.configurations.scala = {
   {
     type = "scala",

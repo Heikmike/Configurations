@@ -16,10 +16,8 @@ keymap("n", "<leader>y", 'Vyp')
 keymap("v", "<leader>y", '"+y')
 
 -- Change in surroundings
-keymap("n", "cib", "f{ci{")
 keymap("n", "cis", "f[ci[")
 keymap("n", "cig", 'f"ci"')
-keymap("n", "cip", "f(ci(")
 keymap("n", "ciq", "f'ci'")
 
 -- Change keys

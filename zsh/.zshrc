@@ -28,7 +28,7 @@ export CHROME_EXECUTABLE=google-chrome-stable
 export MANPAGER='nvim +Man!'
 export MANWIDTH=999
 export EDITOR=nvim
-export QT_QPA_PLATFORM=offscreen
+export QT_QPA_PLATFORM=wayland
 export DOTNET_ROOT=/home/heikmike/.dotnet
 export XDG_CONFIG_HOME=$HOME/.config
 
@@ -132,6 +132,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias bl="sudo systemctl start bluetooth.service && bluetoothctl"
 alias epfl='cd ~/Documents/epfl/ma3'
 alias mpdf="mupdf . &"
 alias codep="code . && exit"

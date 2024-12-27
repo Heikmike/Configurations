@@ -31,13 +31,13 @@ config.font = wezterm.font_with_fallback {
   'Hack Nerd Font Mono',
   'Fira Code Nerd Font Mono',
 }
-config.font_size = 24.0
+config.font_size = 13.0
 
 -- Window
 config.enable_tab_bar = false
 config.window_padding = {
-  left = '50pt',
-  right = '50pt',
+  left = '30pt',
+  right = '30pt',
   top = '30pt',
   bottom = '0pt',
 }
