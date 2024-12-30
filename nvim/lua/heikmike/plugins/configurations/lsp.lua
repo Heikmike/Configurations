@@ -99,14 +99,3 @@ local rust_lsp = lsp.build_options('rust_analyzer', {
 })
 require('rust-tools').setup({ server = rust_lsp })
 
-local dart_lsp = lsp.build_options('dartls', {
-  single_file_support = false,
-  on_attach = function(_, _)
-    lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(
-      vim.lsp.diagnostic.on_publish_diagnostics, {
-        virtual_text = false,
-      }
-    )
-  end
-})
-require("flutter-tools").setup({ lsp = dart_lsp })

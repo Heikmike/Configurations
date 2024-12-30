@@ -112,12 +112,19 @@ return {
     config = function() require("heikmike.plugins.configurations.diffview") end,
   },
   {
-    'akinsho/flutter-tools.nvim',
-    config = function() require("heikmike.plugins.configurations.flutter") end,
-  },
-  {
     'junegunn/vim-easy-align',
     config = function() require("heikmike.plugins.configurations.align") end,
+  },
+  {
+    'nvim-flutter/flutter-tools.nvim',
+    lazy = false,
+    dependencies = {
+      'nvim-lua/plenary.nvim',
+      'stevearc/dressing.nvim', -- optional for vim.ui.select
+    },
+    config = function()
+      require("heikmike.plugins.configurations.flutter-tools")
+    end,
   },
   { 'nvim-tree/nvim-web-devicons' },
   {

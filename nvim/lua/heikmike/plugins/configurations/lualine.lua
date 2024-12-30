@@ -7,7 +7,7 @@ local fileFormatSymbols = {
 require("lualine").setup({
   options = {
     icons_enabled = true,
-    theme = "base16",
+    theme = "catppuccin",
     section_separators = {},
     component_separators = {},
     disabled_filetypes = {},
@@ -35,7 +35,7 @@ require("lualine").setup({
         icon = "󰘬",
       },
       {
-        "diagnostics", sources = { "nvim_diagnostic", "coc" }
+        "diagnostics", sources = { "nvim_diagnostic" }
       },
     },
     lualine_x = {
