@@ -19,7 +19,7 @@ lsp.ensure_installed({
   'lua_ls',
   'rust_analyzer',
 })
-lsp.skip_server_setup({ 'rust_analyzer' })
+lsp.skip_server_setup({ 'rust_analyzer', 'dartls' })
 
 lsp.on_attach(function(_, bufnr)
   local opts = { buffer = bufnr }

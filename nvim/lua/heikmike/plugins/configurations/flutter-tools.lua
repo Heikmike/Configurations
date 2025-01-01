@@ -1,3 +1,63 @@
+local bind = vim.keymap.set
+local telescope = require('telescope.builtin')
+local dap = require('dap')
+local widgets = require('dap.ui.widgets')
+
+local my_on_attach = function(_, bufnr)
+  local opts = { buffer = bufnr }
+
+  bind('n', '<leader>rn', function() vim.lsp.buf.rename() end, opts)
+  bind('n', 'K', function() vim.lsp.buf.hover() end, opts)
+  bind('n', '<C-k>', function() vim.lsp.buf.signature_help() end, opts)
+  bind('n', '<leader>sa', function() vim.lsp.buf.code_action() end, opts)
+  bind('n', 'gd', function() telescope.lsp_definitions() end, opts)
+  bind('n', 'gD', function() vim.lsp.buf.declaration() end, opts)
+  bind('n', 'gt', function() telescope.lsp_type_definitions() end, opts)
+  bind('n', 'gi', function() telescope.lsp_implementations() end, opts)
+  bind('n', 'gr', function() telescope.lsp_references() end, opts)
+  bind('n', 'go', function() telescope.lsp_document_symbols() end, opts)
+  bind('n', 'gO', function() telescope.lsb_document_symbols() end, opts)
+  bind('n', '<leader>sd', function() vim.diagnostic.open_float({ focusable = true }) end, opts)
+  bind('n', '<leader>sk', function() vim.lsp.diagnostic.goto_prev() end, opts)
+  bind('n', '<leader>sj', function() vim.lsp.diagnostic.goto_next() end, opts)
+  bind('n', '<leader>ss', function() telescope.diagnostics() end, opts)
+  bind('n', '<leader>f', function()
+  local current_file = vim.fn.expand('%:p') -- Get the full path of the current file
+  local format_cmd = string.format("dart format %s", current_file)
+  vim.fn.jobstart(format_cmd, {
+    stdout_buffered = true,
+    stderr_buffered = true,
+    on_exit = function(_, exit_code)
+      if exit_code == 0 then
+        vim.cmd("edit")
+      else
+        print("Error formatting file.")
+      end
+    end,
+  })
+  end, opts)
+
+  bind('n', '<leader>dc', function() dap.continue() end, opts)
+  bind('n', '<leader>db', function() dap.toggle_breakpoint() end, opts)
+  bind('n', '<leader>K', function() widgets.hover() end, opts)
+  bind('n', '<leader>sc', function() widgets.cursor_float(widgets.scopes) end, opts)
+  bind('n', '<leader>dn', function() dap.step_over() end, opts)
+  bind('n', '<leader>ds', function() dap.step_into() end, opts)
+  bind('n', '<leader>dr', function()
+    dap.repl.toggle({ width = 20 }, 'vertical split')
+    vim.cmd("wincmd h")
+    vim.cmd("wincmd L")
+    vim.cmd("wincmd h")
+    -- vim.cmd("65 wincmd <")
+  end, opts)
+  bind('n', '<leader>dt', function() dap.terminate() end, opts)
+  bind('n', '<leader>dl', function() dap.run_last() end, opts)
+  bind('n', '<leader>dl', function() dap.run_last() end, opts)
+  bind('n', '<leader>cb', function() dap.clear_breakpoints() end, opts)
+  bind('n', '<leader>tf', ':Telescope flutter commands<CR>', opts)
+end
+
+-- alternatively you can override the default configs
 require("flutter-tools").setup {
   ui = {
     -- the border type to use for all floating windows, the same options/formats
@@ -81,7 +141,7 @@ require("flutter-tools").setup {
       virtual_text = true, -- show the highlight using virtual text
       virtual_text_str = "■", -- the virtual text character to highlight
     },
-    on_attach = my_custom_on_attach,
+    on_attach = my_on_attach,
     capabilities = my_custom_capabilities, -- e.g. lsp_status capabilities
     --- OR you can specify a function to deactivate or change or control how the config is created
     capabilities = function(config)
@@ -100,3 +160,4 @@ require("flutter-tools").setup {
     }
   }
 }
+
