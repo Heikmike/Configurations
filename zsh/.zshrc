@@ -32,6 +32,8 @@ export QT_QPA_PLATFORM=wayland
 export DOTNET_ROOT=/home/heikmike/.dotnet
 export XDG_CONFIG_HOME=$HOME/.config
 
+bindkey '^L' autosuggest-execute
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -104,6 +106,8 @@ function zvm_after_init() {
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git zsh-vi-mode copypath zsh-autosuggestions fast-syntax-highlighting z fzf-zsh-plugin)
+
+ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 
 source $ZSH/oh-my-zsh.sh
 
