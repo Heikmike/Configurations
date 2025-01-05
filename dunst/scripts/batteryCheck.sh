@@ -1,6 +1,6 @@
 #! /bin/zsh
 
-icon="/home/heikmike/Documents/Repositories/Configurations/dunst/icons/archlinux_original.svg"
+icon="/home/heikmike/Documents/Repositories/Configurations/dunst/icons/battery_check.svg"
 appname="BatteryCheck"
 title="Battery State"
 timeout=3000

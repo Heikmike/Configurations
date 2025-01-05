@@ -1,6 +1,6 @@
 #! /bin/zsh
 
-icon="/home/heikmike/Documents/Repositories/Configurations/dunst/icons/archlinux.svg"
+icon="/home/heikmike/Documents/Repositories/Configurations/dunst/icons/battery_low.svg"
 appname="Battery"
 title="Battery Low"
 timeout=10000

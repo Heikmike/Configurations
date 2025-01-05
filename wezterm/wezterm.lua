@@ -21,10 +21,7 @@ config.keys = {
 }
 
 -- Colors
-config.color_scheme = 'Catppuccin Frappe'
-config.colors = {
-  background = '#232634',
-}
+config.color_scheme = 'rose-pine'
 
 -- Fonts
 config.font = wezterm.font_with_fallback {

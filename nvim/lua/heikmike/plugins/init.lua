@@ -187,13 +187,7 @@ return {
   --         vim.api.nvim_command("source $HOME/.config/nvim/lua/heikmike/plugins/configurations/nerdcommenter.vim")
   --     end
   -- },
-  {
-    'rose-pine/neovim',
-    config = function()
-      require("rose-pine").setup()
-      vim.cmd('colorscheme rose-pine')
-    end,
-  },
+  { 'rose-pine/neovim' },
   {
     'nvim-telescope/telescope.nvim',
     config = function()

@@ -57,7 +57,6 @@ local my_on_attach = function(_, bufnr)
   bind('n', '<leader>tf', ':Telescope flutter commands<CR>', opts)
 end
 
--- alternatively you can override the default configs
 require("flutter-tools").setup {
   ui = {
     -- the border type to use for all floating windows, the same options/formats
@@ -142,7 +141,7 @@ require("flutter-tools").setup {
       virtual_text_str = "■", -- the virtual text character to highlight
     },
     on_attach = my_on_attach,
-    capabilities = my_custom_capabilities, -- e.g. lsp_status capabilities
+    -- capabilities = my_custom_capabilities, -- e.g. lsp_status capabilities
     --- OR you can specify a function to deactivate or change or control how the config is created
     capabilities = function(config)
       config.specificThingIDontWant = false
