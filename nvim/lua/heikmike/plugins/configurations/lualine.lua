@@ -7,7 +7,7 @@ local fileFormatSymbols = {
 require("lualine").setup({
   options = {
     icons_enabled = true,
-    theme = "catppuccin",
+    theme = "rose-pine",
     section_separators = {},
     component_separators = {},
     disabled_filetypes = {},

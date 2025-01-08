@@ -8,7 +8,7 @@ keymap("n", "<leader><leader>", ":bu#<CR>")
 keymap("n", "<leader>+", ":horizontal resize +5<CR>")
 keymap("n", "<leader>-", ":horizontal resize -5<CR>")
 keymap("n", "<leader>on", ":only<CR>")
-keymap("n", "<leader>m", ":messages<CR>")
+keymap("n", "<leader>ms", ":messages<CR>")
 -- keymap("n", "<C-D>", "<C-F>")
 keymap("n", "<leader>go", ":lua require('lualine').hide()<CR> | :Goyo<CR>")
 
