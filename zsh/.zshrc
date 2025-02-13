@@ -150,6 +150,7 @@ alias ls="eza --icons --sort=name -l --no-user -h --no-permissions"
 alias la="eza --icons --sort=name -l -h -a"
 alias zathura="zathura --fork"
 alias doc="cd ~/Documents"
+alias docu="cd ~/Documents/Repositories/Documentation"
 alias dow="cd ~/Downloads"
 alias vg="nvim -c 'MyGit'"
 alias py3=python3
