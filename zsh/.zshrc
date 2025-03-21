@@ -18,7 +18,7 @@ export PATH=~/.local/share/coursier/bin:$PATH
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:/home/heikmike/.local/bin
 export PATH=$PATH:/usr/local/texlive/2023/bin/x86_64-linux
-export PATH=$PATH:/home/heikmike/.dotnet
+export PATH=$PATH:/home/heikmike/.dotnet/tools
 export PATH=$PATH:/home/heikmike/stainless
 export PATH=$PATH:/opt/pulsesecure/bin
 export MANPATH=$MANPATH:/usr/local/texlive/2023/texmf-dist/doc/man
@@ -29,7 +29,7 @@ export MANPAGER='nvim +Man!'
 export MANWIDTH=999
 export EDITOR=nvim
 export QT_QPA_PLATFORM=wayland
-export DOTNET_ROOT=/home/heikmike/.dotnet
+export DOTNET_ROOT=/usr/share/dotnet
 export XDG_CONFIG_HOME=$HOME/.config
 
 bindkey '^L' autosuggest-execute
