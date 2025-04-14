@@ -8,7 +8,7 @@ timeout=10000
 while true
 do
     # Get battery value and check if charging
-    battery=$(acpi -b | grep -P -o '[0-9]+(?=%)')
+    battery=$(acpi -b | grep -P -o '[0-9]+(?=%)' | head -n 1)
     is_charging=$(acpi -b | grep -P -o 'Charging')
     message="${battery}% left"
 
