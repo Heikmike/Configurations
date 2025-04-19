@@ -30,10 +30,10 @@
     height = 300
 
     # Position the notification in the top right corner
-    origin = top-right
+    origin = top-center
 
     # Offset from the origin
-    offset = 10x50
+    offset = (0, 150)
 
     # Scale factor. It is auto-detected if value is 0.
     scale = 0
@@ -465,15 +465,22 @@ new_icon = "/home/heikmike/.config/dunst/icons/whatsapp.svg"
 [Battery]
 appname = Battery
 foreground = "#f66151"
-background = "#C0C0C000"
+background = "#C0C0C0e6"
 
 [BatteryCheck]
 appname = BatteryCheck
 foreground = "#ece5dd"
-background = "#33333300"
+background = "#333333e6"
 
 [Time]
 appname = Time
 foreground = "#f6f5f4"
-background = "#33333300"
+background = "#333333e6"
 # vim: ft=cfg
+
+[KeyboardLayout]
+appname = KeyboardLayout
+foreground = "#ffffff"
+background = "#0058e6e6"
+alignment = center
+
