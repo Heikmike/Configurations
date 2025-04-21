@@ -465,7 +465,7 @@ new_icon = "/home/heikmike/.config/dunst/icons/whatsapp.svg"
 [Battery]
 appname = Battery
 foreground = "#f66151"
-background = "#C0C0C0e6"
+background = "#333333e6"
 
 [BatteryCheck]
 appname = BatteryCheck
