@@ -1,4 +1,6 @@
 return {
+  {"eraserhd/parinfer-rust", build = "cargo build --release"},
+  { "elkowar/yuck.vim" },
   {
     "rachartier/tiny-inline-diagnostic.nvim",
     event = "VeryLazy", -- Or `LspAttach`

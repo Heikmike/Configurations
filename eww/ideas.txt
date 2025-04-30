@@ -1,0 +1,3 @@
+- Bottom bar with basic information
+- Volume/Brightness control/popup
+- Popup for current workspace
