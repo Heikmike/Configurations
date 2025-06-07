@@ -137,6 +137,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias config="cd ~/.config"
 alias icat="wezterm imgcat"
 alias bl="bluetoothctl"
 alias mpdf="mupdf . &"

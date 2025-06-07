@@ -1,4 +1,9 @@
 return {
+  { "nvim-java/nvim-java", 
+    config = function()
+      require("heikmike.plugins.configurations.java")
+    end
+  },
   {"eraserhd/parinfer-rust", build = "cargo build --release"},
   { "elkowar/yuck.vim" },
   {
