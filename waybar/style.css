@@ -1,13 +1,11 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: Suisse Intl, FontAwesome, Roboto, Helvetica, Arial, sans-serif;
-    font-size: 13px;
+    font-size: 15px;
 }
 
 window#waybar {
-    background-color: rgba(43, 48, 59, 0.5);
-    border-bottom: 3px solid rgba(100, 114, 125, 0.5);
-    color: #ffffff;
+    background-color: #BDBEC2;
     transition-property: background-color;
     transition-duration: .5s;
 }
@@ -94,16 +92,18 @@ button:hover {
 #scratchpad,
 #power-profiles-daemon,
 #custom-os,
-
-#mpd {
-    padding: 0 10px;
-    color: #ffffff;
-}
+#custom-arch,
 
 #window
 
 #custom-os {
-  color: #ffffff;
+  color: #1793d1;
+  margin-left: 10px;
+  margin-right: 5px;
+}
+
+#custom-arch {
+  color: #000000;
 }
 
 #workspaces {
@@ -121,9 +121,12 @@ button:hover {
 }
 
 #clock {
+  color: #000000;
+  margin-right: 10px;
 }
 
 #battery {
+  color: #000000;
 }
 
 #battery.charging, #battery.plugged {
@@ -171,9 +174,11 @@ label:focus {
 }
 
 #cpu {
+  color: #000000;
 }
 
 #memory {
+  color: #000000;
 }
 
 #disk {
@@ -181,10 +186,11 @@ label:focus {
 }
 
 #backlight {
-    background-color: #90b1b1;
+  color: #000000;
 }
 
 #network {
+  color: #000000;
 }
 
 #network.disconnected {
@@ -192,22 +198,20 @@ label:focus {
 }
 
 #pulseaudio {
-    background-color: #f1c40f;
     color: #000000;
 }
 
 #pulseaudio.muted {
-    background-color: #90b1b1;
-    color: #2a5c45;
-}
-
-#wireplumber {
-    background-color: #fff0f5;
     color: #000000;
 }
 
+#wireplumber {
+    color: #000000;
+    margin-right: 10px;
+}
+
 #wireplumber.muted {
-    background-color: #f53c3c;
+  color: #000000;
 }
 
 #custom-media {

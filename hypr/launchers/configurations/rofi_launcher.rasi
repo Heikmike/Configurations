@@ -18,11 +18,6 @@ configuration {
 
 window {
     font: "CaskaydiaCove Nerd Font 24";
-    location: west;
-    anchor: west;
-    x-offset: 10px;
-    height: 70%;
-    width: 350px;
 
     background-color: @background;
     color: @foreground;
