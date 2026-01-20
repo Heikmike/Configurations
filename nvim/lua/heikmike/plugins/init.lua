@@ -1,10 +1,7 @@
 return {
-  { "nvim-java/nvim-java", 
-    config = function()
-      require("heikmike.plugins.configurations.java")
-    end
-  },
-  {"eraserhd/parinfer-rust", build = "cargo build --release"},
+  { "isobit/vim-caddyfile" },
+  { "mfussenegger/nvim-jdtls" },
+  { "eraserhd/parinfer-rust", build = "cargo build --release" },
   { "elkowar/yuck.vim" },
   {
     "rachartier/tiny-inline-diagnostic.nvim",
@@ -202,43 +199,34 @@ return {
     end,
   },
   { 'nvim-lua/plenary.nvim' },
+  -- LSP Support
+  { 'neovim/nvim-lspconfig' },                 -- Required
+  { 'williamboman/mason.nvim' },               -- Optional
+  { 'williamboman/mason-lspconfig.nvim' },     -- Optional
+
+  -- Autocompletion
   {
-    'VonHeikemen/lsp-zero.nvim',
-    branch = 'v1.x',
-    dependencies = {
-      -- LSP Support
-      { 'neovim/nvim-lspconfig' },             -- Required
-      { 'williamboman/mason.nvim' },           -- Optional
-      { 'williamboman/mason-lspconfig.nvim' }, -- Optional
-
-      -- Autocompletion
-      {
-        'hrsh7th/nvim-cmp',
-        config = function()
-          require("heikmike.plugins.configurations.cmp")
-        end,
-      }, -- Required
-      { "hrsh7th/cmp-vsnip" },
-      { "hrsh7th/vim-vsnip" },
-      { 'hrsh7th/cmp-nvim-lsp' },     -- Required
-      { 'hrsh7th/cmp-buffer' },       -- Optional
-      { 'hrsh7th/cmp-path' },         -- Optional
-      { 'saadparwaiz1/cmp_luasnip' }, -- Optional
-      { 'hrsh7th/cmp-nvim-lua' },     -- Optional
-      { 'onsails/lspkind.nvim' },     -- Optional
-
-      -- Snippets
-      { 'L3MON4D3/LuaSnip' },             -- Required
-      { 'rafamadriz/friendly-snippets' }, -- Optional
-
-      -- Others
-      { 'jose-elias-alvarez/null-ls.nvim' },
-      { 'simrat39/rust-tools.nvim' }
-    },
+    'hrsh7th/nvim-cmp',
     config = function()
-      require("heikmike.plugins.configurations.lsp")
+      require("heikmike.plugins.configurations.cmp")
     end,
-  },
+  },     -- Required
+  { "hrsh7th/cmp-vsnip" },
+  { "hrsh7th/vim-vsnip" },
+  { 'hrsh7th/cmp-nvim-lsp' },         -- Required
+  { 'hrsh7th/cmp-buffer' },           -- Optional
+  { 'hrsh7th/cmp-path' },             -- Optional
+  { 'saadparwaiz1/cmp_luasnip' },     -- Optional
+  { 'hrsh7th/cmp-nvim-lua' },         -- Optional
+  { 'onsails/lspkind.nvim' },         -- Optional
+
+  -- Snippets
+  { 'L3MON4D3/LuaSnip' },                 -- Required
+  { 'rafamadriz/friendly-snippets' },     -- Optional
+
+  -- Others
+  { 'jose-elias-alvarez/null-ls.nvim' },
+  { 'simrat39/rust-tools.nvim' },
 
   {
     "folke/todo-comments.nvim",
