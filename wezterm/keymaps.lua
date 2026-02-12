@@ -32,8 +32,12 @@ local keymaps = {
 
   rotate_panes = {
     mods = 'CMD',
-    key = 'Space',
-    action = action.RotatePanes 'Clockwise',
+    key = 'r',
+    action = action.Multiple {
+      action.TogglePaneZoomState,
+      action.ActivatePaneDirection 'Next',
+      action.TogglePaneZoomState,
+    },
   },
 
   close_pane = {
