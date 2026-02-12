@@ -11,6 +11,7 @@ require("heikmike.lsp.yaml")
 require("heikmike.lsp.json")
 require("heikmike.lsp.xml")
 require("heikmike.lsp.tailwind")
+require("heikmike.lsp.scala")
 
 -- LSP Keymaps
 require("heikmike.lsp.keymaps")

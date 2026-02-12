@@ -67,7 +67,12 @@ vim.lsp.config('yamlls', {
     -- https://github.com/redhat-developer/vscode-redhat-telemetry#how-to-disable-telemetry-reporting
     redhat = { telemetry = { enabled = false } },
     -- formatting disabled by default in yaml-language-server; enable it
-    yaml = { format = { enable = true } },
+    yaml = {
+      format = { enable = true },
+      schemas = {
+        kubernetes = "*.yaml",
+      }
+    },
   },
   on_init = function(client)
     --- https://github.com/neovim/nvim-lspconfig/pull/4016

@@ -1,7 +1,14 @@
 return {
+  {
+    'rebelot/kanagawa.nvim',
+    config = function()
+      require("heikmike.plugins.configurations.kanagawa")
+    end,
+  },
+  { 'diogo464/kubernetes.nvim' },
   { "isobit/vim-caddyfile" },
   { "mfussenegger/nvim-jdtls" },
-  { "eraserhd/parinfer-rust", build = "cargo build --release" },
+  { "eraserhd/parinfer-rust",  build = "cargo build --release" },
   { "elkowar/yuck.vim" },
   {
     "rachartier/tiny-inline-diagnostic.nvim",
@@ -97,10 +104,6 @@ return {
       vim.api.nvim_command("source $HOME/.config/nvim/lua/heikmike/plugins/configurations/copilot.vim")
     end
   },
-  {
-    'scalameta/nvim-metals',
-    config = function() require("heikmike.plugins.configurations.metals") end,
-  },
   { 'junegunn/seoul256.vim' },
   { 'folke/lsp-colors.nvim' },
   { "MunifTanjim/nui.nvim" },
@@ -138,10 +141,6 @@ return {
     end
   },
   {
-    'catppuccin/nvim',
-    config = function() require("heikmike.plugins.configurations.catppuccin") end,
-  },
-  {
     "goolord/alpha-nvim",
     config = function()
       require("heikmike.plugins.configurations.alpha")
@@ -156,10 +155,6 @@ return {
   { 'tree-sitter/tree-sitter-scala' },
   { 'jiangmiao/auto-pairs' },
   { "xiyaowong/nvim-transparent" },
-  {
-    "projekt0n/github-nvim-theme",
-    config = function() require("heikmike.plugins.configurations.github-theme") end,
-  },
   {
     "nvim-lualine/lualine.nvim",
     config = function() require("heikmike.plugins.configurations.lualine") end,
@@ -200,9 +195,9 @@ return {
   },
   { 'nvim-lua/plenary.nvim' },
   -- LSP Support
-  { 'neovim/nvim-lspconfig' },                 -- Required
-  { 'williamboman/mason.nvim' },               -- Optional
-  { 'williamboman/mason-lspconfig.nvim' },     -- Optional
+  { 'neovim/nvim-lspconfig' },             -- Required
+  { 'williamboman/mason.nvim' },           -- Optional
+  { 'williamboman/mason-lspconfig.nvim' }, -- Optional
 
   -- Autocompletion
   {
@@ -210,19 +205,19 @@ return {
     config = function()
       require("heikmike.plugins.configurations.cmp")
     end,
-  },     -- Required
+  }, -- Required
   { "hrsh7th/cmp-vsnip" },
   { "hrsh7th/vim-vsnip" },
-  { 'hrsh7th/cmp-nvim-lsp' },         -- Required
-  { 'hrsh7th/cmp-buffer' },           -- Optional
-  { 'hrsh7th/cmp-path' },             -- Optional
-  { 'saadparwaiz1/cmp_luasnip' },     -- Optional
-  { 'hrsh7th/cmp-nvim-lua' },         -- Optional
-  { 'onsails/lspkind.nvim' },         -- Optional
+  { 'hrsh7th/cmp-nvim-lsp' },     -- Required
+  { 'hrsh7th/cmp-buffer' },       -- Optional
+  { 'hrsh7th/cmp-path' },         -- Optional
+  { 'saadparwaiz1/cmp_luasnip' }, -- Optional
+  { 'hrsh7th/cmp-nvim-lua' },     -- Optional
+  { 'onsails/lspkind.nvim' },     -- Optional
 
   -- Snippets
-  { 'L3MON4D3/LuaSnip' },                 -- Required
-  { 'rafamadriz/friendly-snippets' },     -- Optional
+  { 'L3MON4D3/LuaSnip' },             -- Required
+  { 'rafamadriz/friendly-snippets' }, -- Optional
 
   -- Others
   { 'jose-elias-alvarez/null-ls.nvim' },

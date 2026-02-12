@@ -1,3 +1,4 @@
+local vim = vim
 local api = vim.api
 local telescope = require("telescope.builtin")
 
@@ -24,7 +25,7 @@ metals_config.capabilities = require("cmp_nvim_lsp").default_capabilities()
 local widgets = require("dap.ui.widgets")
 local dap = require("dap")
 
-metals_config.on_attach = function(client, bufnr)
+metals_config.on_attach = function(_, bufnr)
   require("metals").setup_dap()
 
   local opts = { buffer = bufnr }
