@@ -7,7 +7,20 @@ local widgets = require('dap.ui.widgets')
 bind('n', '<leader>fn', function() vim.lsp.buf.document_symbol() end)
 bind('n', '<leader>fm', function() vim.lsp.buf.format() end)
 bind('n', '<leader>rn', function() vim.lsp.buf.rename() end)
-bind('n', 'K', function() vim.lsp.buf.hover() end)
+bind('n', 'K', function()
+  vim.lsp.buf.hover({
+    border = {
+      { "╭", 'HoverBorder' },
+      { "─", 'HoverBorder' },
+      { "╮", 'HoverBorder' },
+      { "│", 'HoverBorder' },
+      { "╯", 'HoverBorder' },
+      { "─", 'HoverBorder' },
+      { "╰", 'HoverBorder' },
+      { "│", 'HoverBorder' },
+    }
+  })
+end)
 bind('n', '<C-k>', function() vim.lsp.buf.signature_help() end)
 bind('n', '<leader>sa', function() vim.lsp.buf.code_action() end)
 bind('n', 'gd', function() vim.lsp.buf.definition() end)
