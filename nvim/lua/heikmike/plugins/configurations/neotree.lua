@@ -1,10 +1,16 @@
 vim.cmd([[ let g:neo_tree_remove_legacy_commands = 1 ]])
 
 -- If you want icons for diagnostic errors, you'll need to define them somewhere:
-vim.fn.sign_define("DiagnosticSignError", { text = " ", texthl = "DiagnosticSignError" })
-vim.fn.sign_define("DiagnosticSignWarn", { text = " ", texthl = "DiagnosticSignWarn" })
-vim.fn.sign_define("DiagnosticSignInfo", { text = " ", texthl = "DiagnosticSignInfo" })
-vim.fn.sign_define("DiagnosticSignHint", { text = "", texthl = "DiagnosticSignHint" })
+vim.diagnostic.config({
+  signs = {
+    text = {
+      [vim.diagnostic.severity.ERROR] = "",
+      [vim.diagnostic.severity.WARN] = "",
+      [vim.diagnostic.severity.INFO] = "",
+      [vim.diagnostic.severity.HINT] = "",
+    }
+  }
+})
 
 require("neo-tree").setup({
   close_if_last_window = false, -- Close Neo-tree if it is the last window left in the tab
@@ -12,7 +18,7 @@ require("neo-tree").setup({
   enable_git_status = true,
   enable_diagnostics = true,
   sort_case_insensitive = false, -- used when sorting files and directories in the tree
-  sort_function = nil,          -- use a custom function for sorting files and directories in the tree
+  sort_function = nil,           -- use a custom function for sorting files and directories in the tree
   -- sort_function = function (a,b)
   --       if a.type == b.type then
   --           return a.path > b.path
@@ -39,7 +45,7 @@ require("neo-tree").setup({
     icon = {
       folder_closed = "",
       folder_open = "",
-      folder_empty = "ﰊ",
+      folder_empty = "",
       -- The next two settings are only a fallback, if you use nvim-web-devicons and configure default icons there
       -- then these will never be used.
       default = "*",
@@ -151,7 +157,7 @@ require("neo-tree").setup({
       enabled = true,
     },
     -- time the current file is changed while the tree is open.
-    group_empty_dirs = false,             -- when true, empty folders will be grouped together
+    group_empty_dirs = false,               -- when true, empty folders will be grouped together
     hijack_netrw_behavior = "open_default", -- netrw disabled, opening a directory opens neo-tree
     -- in whatever position is specified in window.position
     -- "open_current",  -- netrw disabled, opening a directory opens within the
@@ -200,7 +206,7 @@ require("neo-tree").setup({
       enabled = true,
     },
     -- time the current file is changed while the tree is open.
-    group_empty_dirs = true,   -- when true, empty folders will be grouped together
+    group_empty_dirs = true, -- when true, empty folders will be grouped together
     show_unloaded = true,
     window = {
       mappings = {

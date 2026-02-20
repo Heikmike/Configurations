@@ -11,10 +11,11 @@ disabled = true
 
 [os]
 disabled = false
-style = 'bold #1793d1'
+style = 'bold #ffffff' # #1793d1 for Arch
 format = ' [$symbol]($style) '
   [os.symbols]
   Arch = ""
+  Macos = ""
 
 [character]
 success_symbol = "[](#8ff48a)"
