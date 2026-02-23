@@ -1,5 +1,19 @@
 return {
   {
+    'stevearc/oil.nvim',
+    ---@module 'oil'
+    ---@type oil.SetupOpts
+    opts = {},
+    -- Optional dependencies
+    dependencies = { { "nvim-mini/mini.icons", opts = {} } },
+    -- dependencies = { "nvim-tree/nvim-web-devicons" }, -- use if you prefer nvim-web-devicons
+    -- Lazy loading is not recommended because it is very tricky to make it work correctly in all situations.
+    lazy = false,
+    config = function()
+      require("heikmike.plugins.configurations.oil")
+    end,
+  },
+  {
     'rebelot/kanagawa.nvim',
     config = function()
       require("heikmike.plugins.configurations.kanagawa")
@@ -107,12 +121,12 @@ return {
   { 'junegunn/seoul256.vim' },
   { 'folke/lsp-colors.nvim' },
   { "MunifTanjim/nui.nvim" },
-  {
-    "nvim-neo-tree/neo-tree.nvim",
-    config = function()
-      require("heikmike.plugins.configurations.neotree")
-    end
-  },
+  -- {
+  --   "nvim-neo-tree/neo-tree.nvim",
+  --   config = function()
+  --     require("heikmike.plugins.configurations.neotree")
+  --   end
+  -- },
   { 'preservim/vim-pencil' },
   {
     'sindrets/diffview.nvim',

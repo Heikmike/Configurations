@@ -4,7 +4,7 @@ disabled = true
 [directory]
 style = '#ffffff'
 format = ' [$path]($style)[$read_only]($read_only_style) '
-truncation_symbol = '~/.../'
+truncation_symbol = '~/󰇘/'
 
 [gcloud]
 disabled = true
