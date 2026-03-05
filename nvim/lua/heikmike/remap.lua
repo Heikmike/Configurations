@@ -10,7 +10,6 @@ keymap("n", "<leader>-", ":horizontal resize -5<CR>")
 keymap("n", "<leader>on", ":only<CR>")
 keymap("n", "<leader>ms", ":messages<CR>")
 -- keymap("n", "<C-D>", "<C-F>")
-keymap("n", "<leader>go", ":lua require('lualine').hide()<CR> | :Goyo<CR>")
 
 -- Copy and paste
 keymap("n", "<leader>y", 'Vyp')
