@@ -1,5 +1,19 @@
 return {
   {
+    "nvim-neorg/neorg",
+    lazy = false,  -- Disable lazy loading as some `lazy.nvim` distributions set `lazy = true` by default
+    version = "*", -- Pin Neorg to the latest stable release
+    config = function()
+      require("heikmike.plugins.configurations.neorg")
+    end,
+  },
+  {
+    'smithbm2316/centerpad.nvim',
+    config = function()
+      require("heikmike.plugins.configurations.centerpad")
+    end
+  },
+  {
     'stevearc/oil.nvim',
     ---@module 'oil'
     ---@type oil.SetupOpts

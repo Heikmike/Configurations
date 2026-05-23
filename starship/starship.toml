@@ -87,3 +87,7 @@ style = '#6cc24a'
 format = '\[[$symbol $version]($style)\] '
 symbol = '󰏖'
 style = 'bold #eeb38c'
+
+[kubernetes]
+format = "[$symbol]($style) "
+symbol = ' Kubernetes '
