@@ -32,7 +32,7 @@ local keymaps = {
 
   rotate_panes = {
     mods = 'CMD',
-    key = 'Space',
+    key = 'm',
     action = action.RotatePanes 'Clockwise',
   },
 

@@ -32,6 +32,7 @@ config.font = wezterm.font_with_fallback {
   'Fira Code Nerd Font Mono',
 }
 config.font_size = 11.0
+-- config.enable_wayland = false
 
 -- Window
 config.enable_tab_bar = false
