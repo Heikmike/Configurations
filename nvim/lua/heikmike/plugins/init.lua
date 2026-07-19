@@ -1,6 +1,17 @@
 return {
   {
+    "mason-org/mason.nvim",
+    opts = {},
+    config = function()
+      require("heikmike.plugins.configurations.mason")
+    end,
+  },
+  {
     "nvim-neorg/neorg",
+    dependencies = {
+      'nvim-neorg/tree-sitter-norg',
+      'nvim-neorg/tree-sitter-norg-meta',
+    },
     lazy = false,  -- Disable lazy loading as some `lazy.nvim` distributions set `lazy = true` by default
     version = "*", -- Pin Neorg to the latest stable release
     config = function()
@@ -120,12 +131,6 @@ return {
   },
   { 'gpanders/nvim-parinfer' },
   { 'jalvesaq/Nvim-R' },
-  {
-    'mxsdev/nvim-dap-vscode-js',
-    config = function()
-      require("heikmike.plugins.configurations.dap-vscode-js")
-    end,
-  },
   {
     'github/copilot.vim',
     config = function()
@@ -248,7 +253,6 @@ return {
   { 'rafamadriz/friendly-snippets' }, -- Optional
 
   -- Others
-  { 'jose-elias-alvarez/null-ls.nvim' },
   { 'simrat39/rust-tools.nvim' },
 
   {

@@ -18,7 +18,7 @@ dapui.setup(
   {
     controls = {
       element = "repl",
-      enabled = false,
+      enabled = true,
       icons = {
         disconnect = "",
         pause = "",
@@ -47,20 +47,27 @@ dapui.setup(
     },
     layouts = { {
       elements = { {
-        id = "scopes",
-        size = 0.25
-      }, {
-        id = "breakpoints",
+        id = "watches",
         size = 0.25
       }, {
         id = "stacks",
         size = 0.25
       }, {
-        id = "watches",
+        id = "breakpoints",
+        size = 0.25
+      }, {
+        id = "scopes",
         size = 0.25
       } },
       position = "left",
-      size = 40
+      size = 60
+    }, {
+      elements = { {
+        id = "repl",
+        size = 1
+      } },
+      position = "bottom",
+      size = 10
     },},
     mappings = {
       edit = "e",

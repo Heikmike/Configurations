@@ -44,6 +44,7 @@ vim.lsp.config('pytonls', {
     },
   },
   on_attach = function(client, bufnr)
+    vim.keymap.set('n', '<leader>oi', '<cmd>LspPyrightOrganizeImports<cr>', { buffer = bufnr, desc = 'Organize imports' })
     vim.api.nvim_buf_create_user_command(bufnr, 'LspPyrightOrganizeImports', function()
       local params = {
         command = 'pyright.organizeimports',
