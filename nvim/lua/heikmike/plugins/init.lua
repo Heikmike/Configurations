@@ -1,10 +1,47 @@
 return {
-  { "nvim-java/nvim-java", 
+  {
+    "mason-org/mason.nvim",
+    opts = {},
     config = function()
-      require("heikmike.plugins.configurations.java")
-    end
+      require("heikmike.plugins.configurations.mason")
+    end,
   },
-  {"eraserhd/parinfer-rust", build = "cargo build --release"},
+  {
+    "nvim-neorg/neorg",
+    dependencies = {
+      'nvim-neorg/tree-sitter-norg',
+      'nvim-neorg/tree-sitter-norg-meta',
+    },
+    lazy = false,  -- Disable lazy loading as some `lazy.nvim` distributions set `lazy = true` by default
+    version = "*", -- Pin Neorg to the latest stable release
+    config = function()
+      require("heikmike.plugins.configurations.neorg")
+    end,
+  },
+  {
+    'stevearc/oil.nvim',
+    ---@module 'oil'
+    ---@type oil.SetupOpts
+    opts = {},
+    -- Optional dependencies
+    dependencies = { { "nvim-mini/mini.icons", opts = {} } },
+    -- dependencies = { "nvim-tree/nvim-web-devicons" }, -- use if you prefer nvim-web-devicons
+    -- Lazy loading is not recommended because it is very tricky to make it work correctly in all situations.
+    lazy = false,
+    config = function()
+      require("heikmike.plugins.configurations.oil")
+    end,
+  },
+  {
+    'rebelot/kanagawa.nvim',
+    config = function()
+      require("heikmike.plugins.configurations.kanagawa")
+    end,
+  },
+  { 'diogo464/kubernetes.nvim' },
+  { "isobit/vim-caddyfile" },
+  { "mfussenegger/nvim-jdtls" },
+  { "eraserhd/parinfer-rust",  build = "cargo build --release" },
   { "elkowar/yuck.vim" },
   {
     "rachartier/tiny-inline-diagnostic.nvim",
@@ -89,30 +126,20 @@ return {
   { 'gpanders/nvim-parinfer' },
   { 'jalvesaq/Nvim-R' },
   {
-    'mxsdev/nvim-dap-vscode-js',
-    config = function()
-      require("heikmike.plugins.configurations.dap-vscode-js")
-    end,
-  },
-  {
     'github/copilot.vim',
     config = function()
       vim.api.nvim_command("source $HOME/.config/nvim/lua/heikmike/plugins/configurations/copilot.vim")
     end
   },
-  {
-    'scalameta/nvim-metals',
-    config = function() require("heikmike.plugins.configurations.metals") end,
-  },
   { 'junegunn/seoul256.vim' },
   { 'folke/lsp-colors.nvim' },
   { "MunifTanjim/nui.nvim" },
-  {
-    "nvim-neo-tree/neo-tree.nvim",
-    config = function()
-      require("heikmike.plugins.configurations.neotree")
-    end
-  },
+  -- {
+  --   "nvim-neo-tree/neo-tree.nvim",
+  --   config = function()
+  --     require("heikmike.plugins.configurations.neotree")
+  --   end
+  -- },
   { 'preservim/vim-pencil' },
   {
     'sindrets/diffview.nvim',
@@ -141,10 +168,6 @@ return {
     end
   },
   {
-    'catppuccin/nvim',
-    config = function() require("heikmike.plugins.configurations.catppuccin") end,
-  },
-  {
     "goolord/alpha-nvim",
     config = function()
       require("heikmike.plugins.configurations.alpha")
@@ -159,10 +182,6 @@ return {
   { 'tree-sitter/tree-sitter-scala' },
   { 'jiangmiao/auto-pairs' },
   { "xiyaowong/nvim-transparent" },
-  {
-    "projekt0n/github-nvim-theme",
-    config = function() require("heikmike.plugins.configurations.github-theme") end,
-  },
   {
     "nvim-lualine/lualine.nvim",
     config = function() require("heikmike.plugins.configurations.lualine") end,
@@ -202,43 +221,33 @@ return {
     end,
   },
   { 'nvim-lua/plenary.nvim' },
+  -- LSP Support
+  { 'neovim/nvim-lspconfig' },             -- Required
+  { 'williamboman/mason.nvim' },           -- Optional
+  { 'williamboman/mason-lspconfig.nvim' }, -- Optional
+
+  -- Autocompletion
   {
-    'VonHeikemen/lsp-zero.nvim',
-    branch = 'v1.x',
-    dependencies = {
-      -- LSP Support
-      { 'neovim/nvim-lspconfig' },             -- Required
-      { 'williamboman/mason.nvim' },           -- Optional
-      { 'williamboman/mason-lspconfig.nvim' }, -- Optional
-
-      -- Autocompletion
-      {
-        'hrsh7th/nvim-cmp',
-        config = function()
-          require("heikmike.plugins.configurations.cmp")
-        end,
-      }, -- Required
-      { "hrsh7th/cmp-vsnip" },
-      { "hrsh7th/vim-vsnip" },
-      { 'hrsh7th/cmp-nvim-lsp' },     -- Required
-      { 'hrsh7th/cmp-buffer' },       -- Optional
-      { 'hrsh7th/cmp-path' },         -- Optional
-      { 'saadparwaiz1/cmp_luasnip' }, -- Optional
-      { 'hrsh7th/cmp-nvim-lua' },     -- Optional
-      { 'onsails/lspkind.nvim' },     -- Optional
-
-      -- Snippets
-      { 'L3MON4D3/LuaSnip' },             -- Required
-      { 'rafamadriz/friendly-snippets' }, -- Optional
-
-      -- Others
-      { 'jose-elias-alvarez/null-ls.nvim' },
-      { 'simrat39/rust-tools.nvim' }
-    },
+    'hrsh7th/nvim-cmp',
     config = function()
-      require("heikmike.plugins.configurations.lsp")
+      require("heikmike.plugins.configurations.cmp")
     end,
-  },
+  }, -- Required
+  { "hrsh7th/cmp-vsnip" },
+  { "hrsh7th/vim-vsnip" },
+  { 'hrsh7th/cmp-nvim-lsp' },     -- Required
+  { 'hrsh7th/cmp-buffer' },       -- Optional
+  { 'hrsh7th/cmp-path' },         -- Optional
+  { 'saadparwaiz1/cmp_luasnip' }, -- Optional
+  { 'hrsh7th/cmp-nvim-lua' },     -- Optional
+  { 'onsails/lspkind.nvim' },     -- Optional
+
+  -- Snippets
+  { 'L3MON4D3/LuaSnip' },             -- Required
+  { 'rafamadriz/friendly-snippets' }, -- Optional
+
+  -- Others
+  { 'simrat39/rust-tools.nvim' },
 
   {
     "folke/todo-comments.nvim",

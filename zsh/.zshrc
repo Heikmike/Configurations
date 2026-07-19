@@ -14,6 +14,8 @@ export BROWSER=firefox
 export JAVA_HOME="/usr/lib/jvm/java-17-openjdk"
 export XDG_SCREENSHOTS_DIR="$HOME/Pictures/Screenshots"
 export XDG_PICTURES_DIR="$HOME/Pictures/Screenshots"
+export PATH=$HOME/.istioctl/bin:$PATH
+export PATH=$PATH:/Users/heje/.local/bin/jdt-language-server-latest/bin
 export PATH=~/.local/share/coursier/bin:$PATH
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:/home/heikmike/.local/bin
@@ -22,6 +24,7 @@ export PATH=$PATH:/home/heikmike/.dotnet/tools
 export PATH=$PATH:/home/heikmike/stainless
 export PATH=$PATH:/opt/pulsesecure/bin
 export PATH=$PATH:/home/heikmike/.cargo/bin
+export PATH=$PATH:/Library/PostgreSQL/18/bin
 export MANPATH=$MANPATH:/usr/local/texlive/2023/texmf-dist/doc/man
 export INFOPATH=$INFOPATH:/usr/local/texlive/2023/texmf-dist/doc/info
 export MOZ_ENABLE_WAYLAND=1
@@ -32,6 +35,10 @@ export EDITOR=nvim
 export QT_QPA_PLATFORM=wayland
 export DOTNET_ROOT=/usr/share/dotnet
 export XDG_CONFIG_HOME=$HOME/.config
+export JENKINS_URL='http://localhost:8080'
+export JENKINS_USER_ID='Heikmike'
+export JENKINS_API_TOKEN='1166bafac767f6fe7db1b4dae4b4c95dfd'
+export JENKINS_PASSWORD='heikel'
 
 bindkey '^L' autosuggest-execute
 
@@ -138,6 +145,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias todo="python3 ~/Documents/other/things.py"
+alias f='fzf --preview-window=right --preview "bat --color=always --style=numbers --line-range=:500 {}" --height=100%'
 alias config="cd ~/.config"
 alias icat="wezterm imgcat"
 alias bl="bluetoothctl"
@@ -145,9 +153,6 @@ alias mpdf="mupdf . &"
 alias codep="code . && exit"
 alias za="zathura"
 alias sc="cd ~/.config/starship && nvim starship.toml"
-alias ca="bluetoothctl connect F0:D3:1F:87:3F:9E"
-alias da="bluetoothctl disconnect F0:D3:1F:87:3F:9E"
-alias opf="openoffice4"
 alias fire="firefox"
 alias ls="eza --icons --sort=name -l --no-user -h --no-permissions"
 alias la="eza --icons --sort=name -l -h -a"
@@ -156,6 +161,7 @@ alias doc="cd ~/Documents"
 alias docu="cd ~/Documents/Repositories/Documentation"
 alias dow="cd ~/Downloads"
 alias vg="nvim -c 'MyGit'"
+alias vn="cd ~/neorg && nvim -c 'Neorg index'"
 alias py3=python3
 alias dc=docker-compose
 alias u=unzip
@@ -163,10 +169,9 @@ alias v=nvim
 alias vim=nvim
 alias c=clear
 alias cdc="cd $HOME/Documents/Repositories/Configurations"
-alias nc="cd ~/.config/nvim && nvim ."
+alias nc="cd ~/.config/nvim && nvim"
 alias hc="cd ~/.config/hypr/ && nvim ."
 alias zc="cd ~/ && nvim .zshrc"
-alias kc="cd ~/.config/kitty && nvim kitty.conf"
 alias sd="sudo shutdown now"
 alias rb="sudo reboot"
 alias cat="bat"
@@ -206,3 +211,17 @@ export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export NVM_DIR="$HOME/.config/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
+
+. "$HOME/.local/bin/env"
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - zsh)"
+export PATH="/opt/homebrew/opt/postgresql@18/bin:$PATH"

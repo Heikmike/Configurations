@@ -4,17 +4,18 @@ disabled = true
 [directory]
 style = '#ffffff'
 format = ' [$path]($style)[$read_only]($read_only_style) '
-truncation_symbol = '~/.../'
+truncation_symbol = '~/󰇘/'
 
 [gcloud]
 disabled = true
 
 [os]
 disabled = false
-style = 'bold #1793d1'
+style = 'bold #ffffff' # #1793d1 for Arch
 format = ' [$symbol]($style) '
   [os.symbols]
   Arch = ""
+  Macos = ""
 
 [character]
 success_symbol = "[](#8ff48a)"
@@ -86,3 +87,7 @@ style = '#6cc24a'
 format = '\[[$symbol $version]($style)\] '
 symbol = '󰏖'
 style = 'bold #eeb38c'
+
+[kubernetes]
+format = "[$symbol]($style) "
+symbol = ' Kubernetes '
