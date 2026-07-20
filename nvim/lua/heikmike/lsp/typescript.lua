@@ -121,7 +121,6 @@ vim.lsp.config('tsls', {
       local source_actions = vim.tbl_filter(function(action)
         return vim.startswith(action, 'source.')
       end, client.server_capabilities.codeActionProvider.codeActionKinds)
-
       vim.lsp.buf.code_action({
         context = {
           only = source_actions,
@@ -129,6 +128,16 @@ vim.lsp.config('tsls', {
         },
       })
     end, {})
+
+    vim.keymap.set('n', '<leader>oi', function()
+      vim.lsp.buf.code_action({
+        context = {
+          only = { 'source.organizeImports' },
+          diagnostics = {},
+        },
+        apply = true,
+      })
+    end, { buffer = bufnr, desc = 'LSP: Organize imports' })
   end,
 })
 
