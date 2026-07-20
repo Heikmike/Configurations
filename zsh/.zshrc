@@ -11,7 +11,7 @@ export ZSH="$HOME/.oh-my-zsh"
 
 export HADOOP_CONF_DIR="/etc/hadoop"
 export BROWSER=firefox
-# export JbindingAVA_HOME="/usr/lib/jvm/java-11-openjdk/"
+export JAVA_HOME="/usr/lib/jvm/java-17-openjdk"
 export XDG_SCREENSHOTS_DIR="$HOME/Pictures/Screenshots"
 export XDG_PICTURES_DIR="$HOME/Pictures/Screenshots"
 export PATH=$HOME/.istioctl/bin:$PATH
@@ -144,8 +144,8 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias todo="python3 ~/Documents/other/things.py"
 alias f='fzf --preview-window=right --preview "bat --color=always --style=numbers --line-range=:500 {}" --height=100%'
-alias jenkins="java -jar /Users/heje/Documents/other/jenkins/jenkins.war --httpPort=8080"
 alias config="cd ~/.config"
 alias icat="wezterm imgcat"
 alias bl="bluetoothctl"

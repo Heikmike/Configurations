@@ -19,12 +19,6 @@ return {
     end,
   },
   {
-    'smithbm2316/centerpad.nvim',
-    config = function()
-      require("heikmike.plugins.configurations.centerpad")
-    end
-  },
-  {
     'stevearc/oil.nvim',
     ---@module 'oil'
     ---@type oil.SetupOpts
