@@ -1,3 +1,7 @@
+-- INFO: Adapter = Debug server. Type "server" means we manually launch the server and we explain in the adapter how to connect to it. Type "executable"
+-- means we explain in the adapter how Neovim should start the debug server
+-- INFO: Configurations = Debugees, i.e. applications that are being debugged. "type" is the name of the adapter. Request "attach" means we manually
+-- started the debugee and we specify how to reach out to it. 
 local bind = vim.keymap.set
 local dap = require("dap")
 local widgets = require('dap.ui.widgets')
