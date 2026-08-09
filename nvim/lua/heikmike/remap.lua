@@ -28,3 +28,6 @@ keymap("n", "<leader>nc", ":e ~/.config/nvim<CR> | :cd ~/.config/nvim<CR>")
 
 -- Auto save toggle
 keymap("n", "<leader>as", ":ASToggle<CR>")
+
+vim.cmd("nnoremap k kzz")
+vim.cmd("nnoremap j jzz")

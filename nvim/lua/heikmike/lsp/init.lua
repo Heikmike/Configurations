@@ -14,6 +14,7 @@ require("heikmike.lsp.tailwind")
 require("heikmike.lsp.scala")
 require("heikmike.lsp.cpp")
 require("heikmike.lsp.sql")
+require("heikmike.lsp.caddy")
 
 local vim = vim
 local bind = vim.keymap.set

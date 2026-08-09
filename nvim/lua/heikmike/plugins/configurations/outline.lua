@@ -37,7 +37,7 @@ outline.setup({
 
     -- Auto close the outline window if goto_location is triggered and not for
     -- peek_location
-    auto_close = false,
+    auto_close = true,
     -- Automatically scroll to the location in code when navigating outline window.
     auto_jump = false,
     -- boolean or integer for milliseconds duration to apply a temporary highlight

@@ -1,46 +1,47 @@
+local vim = vim
 local keymap = vim.keymap.set
-local opts = {noremap = true, silent = true}
+local opts = { noremap = true, silent = true }
 local actions = require('telescope.actions')
 local telescope = require("telescope")
 
 telescope.load_extension("flutter")
 
 require('telescope').setup {
-    defaults = {
-        color_devicons = true,
+  defaults = {
+    color_devicons = true,
 
-        file_previewer = require("telescope.previewers").vim_buffer_cat.new,
-        grep_previewer = require("telescope.previewers").vim_buffer_vimgrep.new,
-        qflist_previewer = require("telescope.previewers").vim_buffer_qflist.new,
+    file_previewer = require("telescope.previewers").vim_buffer_cat.new,
+    grep_previewer = require("telescope.previewers").vim_buffer_vimgrep.new,
+    qflist_previewer = require("telescope.previewers").vim_buffer_qflist.new,
 
-        mappings = {
-            i = {
-                ["<C-a>"] = actions.select_all,
-                ["<C-k>"] = actions.move_selection_previous,
-                ["<C-j>"] = actions.move_selection_next
-            }
-        }
-    },
-    pickers = {},
-    extensions = {}
+    mappings = {
+      i = {
+        ["<C-a>"] = actions.select_all,
+        ["<C-k>"] = actions.move_selection_previous,
+        ["<C-j>"] = actions.move_selection_next
+      }
+    }
+  },
+  pickers = {},
+  extensions = {}
 }
 
 local function getVisualSelection()
-	vim.cmd('noau normal! "vy"')
-	local text = vim.fn.getreg("v")
-	vim.fn.setreg("v", {})
+  vim.cmd('noau normal! "vy"')
+  local text = vim.fn.getreg("v")
+  vim.fn.setreg("v", {})
 
-	text = string.gsub(text, "\n", "")
-	if #text > 0 then
-		return text
-	else
-		return ""
-	end
+  text = string.gsub(text, "\n", "")
+  if #text > 0 then
+    return text
+  else
+    return ""
+  end
 end
 
 keymap("v", "<C-f>", function()
-	local text = getVisualSelection()
-	require("telescope.builtin").live_grep({ default_text = text })
+  local text = getVisualSelection()
+  require("telescope.builtin").live_grep({ default_text = text })
 end, opts)
 keymap('n', '<A-c>', ':Telescope commands<CR>', opts)
 keymap('n', '<C-h>', ':Telescope command_history<CR>', opts)

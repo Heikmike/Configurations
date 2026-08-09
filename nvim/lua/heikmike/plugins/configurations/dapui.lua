@@ -85,4 +85,4 @@ dapui.setup(
   }
 )
 
-bind('n', '<leader>dd', function() dapui.close() end)
+bind('n', '<leader>dd', function() dapui.toggle() end)
