@@ -69,12 +69,6 @@ local keymaps = {
     key = 'j',
     action = action.ActivatePaneDirection 'Down',
   },
-
-  go_next_pane = {
-    mods = 'CMD',
-    key = 'Tab',
-    action = action.ActivatePaneDirection 'Next',
-  },
 }
 
 return keymaps
