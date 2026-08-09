@@ -99,9 +99,9 @@ return {
   },
   { 'RRethy/base16-nvim' },
   {
-    'simrat39/symbols-outline.nvim',
+    "hedyhli/outline.nvim",
     config = function()
-      require("heikmike.plugins.configurations.symbols-outline")
+      require("heikmike.plugins.configurations.outline")
     end,
   },
   {
@@ -134,17 +134,7 @@ return {
   { 'junegunn/seoul256.vim' },
   { 'folke/lsp-colors.nvim' },
   { "MunifTanjim/nui.nvim" },
-  -- {
-  --   "nvim-neo-tree/neo-tree.nvim",
-  --   config = function()
-  --     require("heikmike.plugins.configurations.neotree")
-  --   end
-  -- },
   { 'preservim/vim-pencil' },
-  {
-    'sindrets/diffview.nvim',
-    config = function() require("heikmike.plugins.configurations.diffview") end,
-  },
   {
     'junegunn/vim-easy-align',
     config = function() require("heikmike.plugins.configurations.align") end,

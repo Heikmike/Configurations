@@ -49,23 +49,4 @@ config.colors = {
   background = '#191724'
 }
 
--- Fonts
-config.font = wezterm.font_with_fallback {
-  'Hack Nerd Font Mono',
-  'Fira Code Nerd Font Mono',
-}
-config.font_size = 11.0
--- config.enable_wayland = false
-
--- Window
-config.enable_tab_bar = false
-config.window_padding = {
-  left = '30pt',
-  right = '30pt',
-  top = '15pt',
-  bottom = '0pt',
-}
-
-config.warn_about_missing_glyphs = false
-
 return config

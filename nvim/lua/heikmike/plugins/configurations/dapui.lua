@@ -1,4 +1,5 @@
 local dap, dapui = require 'dap', require 'dapui'
+local bind = vim.keymap.set
 
 -- Launch dapui when debugging starts
 dap.listeners.before.attach.dapui_config = function()
@@ -83,3 +84,5 @@ dapui.setup(
     }
   }
 )
+
+bind('n', '<leader>dd', function() dapui.close() end)
