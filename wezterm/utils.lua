@@ -1,6 +1,5 @@
 local wezterm = require 'wezterm'
 
-
 local cycle_panes_callback = wezterm.action_callback(function(_, pane)
   local tab = pane:tab()
   local panes = tab:panes()

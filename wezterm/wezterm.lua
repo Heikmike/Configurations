@@ -29,7 +29,7 @@ local config = {
     'Hack Nerd Font Mono',
     'Fira Code Nerd Font Mono',
   },
-  font_size = 16,
+  font_size = 13.5,
 
   -- Window
   enable_tab_bar = false,
