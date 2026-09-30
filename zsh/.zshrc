@@ -222,3 +222,7 @@ export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init - zsh)"
 export PATH="/opt/homebrew/opt/postgresql@18/bin:$PATH"
+
+# For Node Version Manager, not sure what it does
+# Arch linux documentation recommendation
+. /usr/share/nvm/init-nvm.sh
