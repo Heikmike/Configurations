@@ -4,8 +4,6 @@ local opts = { noremap = true, silent = true }
 local actions = require('telescope.actions')
 local telescope = require("telescope")
 
-telescope.load_extension("flutter")
-
 require('telescope').setup {
   defaults = {
     color_devicons = true,
@@ -48,4 +46,3 @@ keymap('n', '<C-h>', ':Telescope command_history<CR>', opts)
 keymap('n', '<C-p>', ':Telescope find_files<CR>', opts)
 keymap('n', '<C-B>', ':Telescope buffers<CR>', opts)
 keymap('n', '<C-F>', ':Telescope live_grep<CR>', opts)
--- keymap('n', '<leader>fl', ':Telescope flutter commands<CR>', opts)
